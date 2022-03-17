@@ -13,5 +13,5 @@
     4. [*Confidence Interval (C.I.)*](https://www.notion.so/Stats-Probability-fundamentals-13a62a30a10b4c72aa70e7be02ff1c71)
     5. [*Emparical bootstrap*](https://www.notion.so/Stats-Probability-fundamentals-13a62a30a10b4c72aa70e7be02ff1c71)
 6. [*Hypothysis Testing*](https://www.notion.so/Stats-Probability-fundamentals-13a62a30a10b4c72aa70e7be02ff1c71)
-    1. [*Null Hypothesis](https://www.notion.so/Stats-Probability-fundamentals-13a62a30a10b4c72aa70e7be02ff1c71) H0 & Alternative Hypothesis H1*
+    1. [*Null Hypothesis (H0) & Alternative Hypothesis (H1)](https://www.notion.so/Stats-Probability-fundamentals-13a62a30a10b4c72aa70e7be02ff1c71) 
 7. *[Extra Reads](https://www.notion.so/Stats-Probability-fundamentals-13a62a30a10b4c72aa70e7be02ff1c71)*
