@@ -28,3 +28,6 @@ Index
 8. [Performance Matrics for the Models](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
 9. [Misc.](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
 10. [Random-Scenario-based-Question-to-handle](https://www.notion.so/kmistri/Fundamentals-of-ML-Part-2-3aefa6214b894af589aefeb9bf0fd170)
+
+Refer:
+[Master page for Classical ML](https://www.notion.so/kmistri/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
