@@ -7,10 +7,11 @@ Index
     2. [TF-IDF](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
     3. [Word2Vec](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
     4. [Bert Model](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
-4. [Training, Testing related topics](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
+4. ***[Distance Measures ******](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)***
+5. [Training, Testing related topics](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
     1. Fundamentals
     2. [Cross-Validation](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
-5. ***[Distance Measures ******](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)***
+    3. [*Matrics*******](https://www.notion.so/Fundamentals-of-ML-Part-1-8d9b05effffe48c382f00fa93575b292)
 6. [ML Algorithms](https://www.notion.so/6-ML-Algorithms-a6a5026e47f84607b4ad7284f53a524f)
     1. [K-Nearest Neighbors [KNN]](https://www.notion.so/6-ML-Algorithms-a6a5026e47f84607b4ad7284f53a524f)
     2. [LSH (Locality Sensitive Hashing)](https://www.notion.so/6-ML-Algorithms-a6a5026e47f84607b4ad7284f53a524f)
