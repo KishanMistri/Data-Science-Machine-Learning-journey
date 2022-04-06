@@ -4,4 +4,9 @@ List of source to read:
 - [My Notion List of Question - In Progress](https://www.notion.so/kmistri/Interview-Questions-list-783bc23ecb5d4612bb6db4b0f0e6dace)
 - [SoundCloud AppliedAI Questions](https://soundcloud.com/applied-ai-course/sets/interview-conceptual-questions)
 - [Positionwise all sub-component questions with levels](https://www.confetti.ai/curriculum/machine-learning-engineer)
-- [200 Descriptive Qs](https://huyenchip.com/ml-interviews-book/contents/part-ii.-questions.html)
+- [200 Descriptive Qs from Book - Introduction to Machine Learning Interviews](https://huyenchip.com/ml-interviews-book/contents/part-ii.-questions.html)
+- Cont.
+
+Case Study: (Additional)
+- [Tiger Analytics case studies](https://www.tigeranalytics.com/case-study/)
+- Cont.
