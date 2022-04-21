@@ -6,21 +6,21 @@
    - Also, we can use **[PCA](http://www.analyticsvidhya.com/blog/2016/03/practical-guide-principal-component-analysis-python/)** and pick the components which can explain the maximum variance in the data set.
    - We can also apply our business understanding to estimate which all predictors can impact the response variable. But, this is an intuitive approach, failing to identify useful predictors might result in significant loss of information.
 
-#### 2. Is rotation necessary in PCA? If yes, Why? What will happen if you don't rotate the components? [(1)](https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/)
+#### 2. Is rotation necessary in PCA? If yes, Why? What will happen if you don't rotate the components? 
    - Yes, rotation (orthogonal) is necessary because it maximizes the difference between variance captured by the component. This makes the components easier to interpret. Not to forget, that's the motive of doing PCA where, we aim to select fewer components (than features) which can explain the maximum variance in the data set. By doing rotation, the relative location of the components doesn't change, it only changes the actual coordinates of the points.
    - If we don't rotate the components, the effect of PCA will diminish and we'll have to select more number of components to explain variance in the data set.
 
-#### 3. You are given a data set. The data set has missing values which spread along 1 standard deviation from the median. What percentage of data would remain unaffected? Why? [(1)](https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/)
+#### 3. You are given a data set. The data set has missing values which spread along 1 standard deviation from the median. What percentage of data would remain unaffected? Why?
    - This question has enough hints for you to start thinking! Since, the data is spread across median, let’s assume it’s a normal distribution. We know, in a normal distribution, ~68% of the data lies in 1 standard deviation from mean (or mode, median), which leaves ~32% of the data unaffected. Therefore, ~32% of the data would remain unaffected by missing values.
 
-#### 4. You are given a data set on cancer detection. You’ve build a classification model and achieved an accuracy of 96%. Why shouldn’t you be happy with your model performance? What can you do about it? [(1)](https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/)
+#### 4. You are given a data set on cancer detection. You’ve build a classification model and achieved an accuracy of 96%. Why shouldn’t you be happy with your model performance? What can you do about it? 
    - If you have worked on enough data sets, you should deduce that cancer detection results in imbalanced data. In an imbalanced data set, accuracy should not be used as a measure of performance because 96% (as given) might only be predicting majority class correctly, but our class of interest is minority class (4%) which is the people who actually got diagnosed with cancer. Hence, in order to evaluate model performance, we should use Sensitivity (True Positive Rate), Specificity (True Negative Rate), F measure to determine class wise performance of the classifier. If the minority class performance is found to to be poor, we can undertake the following steps:
    1. We can use undersampling, oversampling or SMOTE to make the data balanced.
    2. We can alter the prediction threshold value by doing **[probability caliberation](http://www.analyticsvidhya.com/blog/2016/07/platt-scaling-isotonic-regression-minimize-logloss-error/)** and finding a optimal threshold using AUC-ROC curve.
    3. We can assign weight to classes such that the minority classes gets larger weight.
    4. We can also use anomaly detection.
 
-#### 5. Why is naive Bayes so ‘naive’ ? [(1)](https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/)
+#### 5. Why is naive Bayes so ‘naive’ ?
    - Naive Bayes is so ‘naive’ because it assumes that all of the features in a data set are equally important and independent. As we know, these assumption are rarely true in real world scenario.
 
 #### 6. Explain prior probability, likelihood and marginal likelihood in context of naiveBayes algorithm?
@@ -69,6 +69,92 @@
 #### 15. After analyzing the model, your manager has informed that your regression model is suffering from multicollinearity. How would you check if he’s true? Without losing any information, can you still build a better model?
    - To check multicollinearity, we can create a correlation matrix to identify & remove variables having correlation above 75% (deciding a threshold is subjective). In addition, we can use calculate VIF ([variance inflation factor](https://www.notion.so/6-ML-Algorithms-a6a5026e47f84607b4ad7284f53a524f)) to check the presence of multicollinearity. VIF value <= 4 suggests no multicollinearity whereas a value of >= 10 implies serious multicollinearity. Also, we can use tolerance as an indicator of multicollinearity.
    - But, removing correlated variables might lead to loss of information. In order to retain those variables, we can use penalized regression models like ridge or lasso regression. Also, we can add some random noise in correlated variable so that the variables become different from each other. But, adding noise might affect the prediction accuracy, hence this approach should be carefully used.
+
+#### 16. When is Ridge regression favorable over Lasso regression?
+   - You can quote ISLR’s authors Hastie, Tibshirani who asserted that, in presence of few variables with medium / large sized effect, use lasso regression. In presence of many variables with small / medium sized effect, use ridge regression.
+   - Conceptually, we can say, lasso regression (L1) does both variable selection and parameter shrinkage, whereas Ridge regression only does parameter shrinkage and end up including all the coefficients in the model. In presence of correlated variables, ridge regression might be the preferred choice. Also, ridge regression works best in situations where the least square estimates have higher variance. Therefore, it depends on our model objective.
+
+#### 17. Rise in global average temperature led to decrease in number of pirates around the world. Does that mean that decrease in number of pirates caused the climate change?
+   - After reading this question, you should have understood that this is a classic case of “causation and correlation”. No, we can’t conclude that decrease in number of pirates caused the climate change because there might be other factors (lurking or confounding variables) influencing this phenomenon.
+   - Therefore, there might be a correlation between global average temperature and number of pirates, but based on this information we can’t say that pirated died because of rise in global average temperature.
+
+#### 18. While working on a data set, how do you select important variables? Explain your methods.
+   - Following are the methods of variable selection you can use:
+   1. Remove the correlated variables prior to selecting important variables
+   2. Use linear regression and select variables based on p values
+   3. Use Forward Selection, Backward Selection, Stepwise Selection
+   4. Use Random Forest, Xgboost and plot variable importance chart
+   5. Use Lasso Regression
+   Measure information gain for the available set of features and select top n features accordingly.
+
+#### 19. What is the difference between covariance and correlation?
+   - Correlation is the standardized form of covariance.
+   - Covariances are difficult to compare. 
+   - For example: if we calculate the covariances of salary ($) and age (years), we’ll get different covariances which can’t be compared because of having unequal scales. To combat such situation, we calculate correlation to get a value between -1 and 1, irrespective of their respective scale.
+
+#### 20. Is it possible capture the correlation between continuous and categorical variable? If yes, how?
+   - Yes, we can use ANCOVA (analysis of covariance) technique to capture association between continuous and categorical variables.
+
+#### 21. Both being tree based algorithm, how is random forest different from Gradient boosting algorithm (GBM)?
+   - The fundamental difference is, random forest uses bagging technique to make predictions. GBM uses boosting techniques to make predictions.
+   - In **bagging** technique, a data set is divided into n samples using randomized sampling. Then, using a single learning algorithm a model is build on all samples. Later, the resultant predictions are combined using voting or averaging. Bagging is done is parallel. 
+   - In **boosting** technique, after the first round of predictions, the algorithm weighs misclassified predictions higher, such that they can be corrected in the succeeding round. This sequential process of giving higher weights to misclassified predictions continue until a stopping criterion is reached.
+   - Random forest improves model accuracy by **reducing variance** (mainly). The trees grown are uncorrelated to maximize the decrease in variance. 
+   - On the other hand, GBM improves accuracy my **reducing both bias and variance** in a model.
+
+#### 22. Running a binary classification tree algorithm is the easy part. Do you know how does a tree splitting takes place i.e. how does the tree decide which variable to split at the root node and succeeding nodes?
+   - A classification trees makes decision based on Gini Index and Node Entropy. In simple words, the tree algorithm find the best possible feature which can divide the data set into purest possible children nodes.
+   - Gini index says, if we select two items from a population at random then they must be of same class and probability for this is 1 if population is pure. We can calculate Gini as following:
+   1. Calculate Gini for sub-nodes, using formula sum of square of probability for success and failure (p^2+q^2).
+   2. Calculate Gini for split using weighted Gini score of each node of that split
+   Entropy is the measure of impurity as given by (for binary class):
+   ```
+   Entropy = -p*log_2(p) - q*log_2(p)
+   ```
+   Here p and q is probability of success and failure respectively in that node. Entropy is zero when a node is homogeneous. It is maximum when a both the classes are present in a node at 50% – 50%. Lower entropy is desirable.
+
+#### 23. You’ve built a random forest model with 10000 trees. You got delighted after getting training error as 0.00. But, the validation error is 34.23. What is going on? Haven’t you trained your model perfectly?
+   - The model has overfitted. Training error 0.00 means the classifier has mimiced the training data patterns to an extent, that they are not available in the unseen data. Hence, when this classifier was run on unseen sample, it couldn’t find those patterns and returned prediction with higher error. 
+   - In random forest, it happens when we use larger number of trees than necessary. Hence, to avoid these situation, we should tune number of trees using cross validation.
+
+#### 24. You’ve got a data set to work having p (no. of variable) > n (no. of observation). Why is OLS (Ordinary Least Squares regression (OLS) ~ Linear Regression)  as bad option to work with? Which techniques would be best to use? Why?
+   - In such high dimensional data sets, we can’t use classical regression techniques, since their assumptions tend to fail. When p > n, we can no longer calculate a unique least square coefficient estimate, the variances become infinite, so OLS cannot be used at all.
+   - To combat this situation, we can use penalized regression methods like lasso, LARS, ridge which can shrink the coefficients to reduce variance. Precisely, ridge regression works best in situations where the least square estimates have higher variance.
+   - Among other methods include subset regression, forward stepwise regression.
+
+#### 25. What is convex hull ? (Hint: Think SVM)
+   - In case of linearly separable data, convex hull represents the outer boundaries of the two group of data points. Once convex hull is created, we get maximum margin hyperplane (MMH) as a perpendicular bisector between two convex hulls. MMH is the line which attempts to create greatest separation between two groups.
+
+#### 26. We know that one hot encoding increasing the dimensionality of a data set. But, label encoding doesn’t. How ?
+   - Don’t get baffled at this question. It’s a simple question asking the difference between the two.
+   - Using one hot encoding, the dimensionality (a.k.a features) in a data set get increased because it creates a new variable for each level present in categorical variables. For example: let’s say we have a variable ‘color’. The variable has 3 levels namely Red, Blue and Green. One hot encoding ‘color’ variable will generate three new variables as Color.Red, Color.Blue and Color.Green containing 0 and 1 value.
+   - In label encoding, the levels of a categorical variables gets encoded as 0 and 1, so no new variable is created. Label encoding is majorly used for binary variables.
+
+#### 27. What cross validation technique would you use on time series dataset? Is it k-fold or LOOCV?
+   - Neither.
+   In time series problem, k fold can be troublesome because there might be some pattern in year 4 or 5 which is not in year 3. Resampling the data set will separate these trends, and we might end up validation on past years, which is incorrect. Instead, we can use forward chaining strategy with 5 fold as shown below:
+   - fold 1 : training [1], test [2]
+   - fold 2 : training [1 2], test [3]
+   - fold 3 : training [1 2 3], test [4]
+   - fold 4 : training [1 2 3 4], test [5]
+   - fold 5 : training [1 2 3 4 5], test [6]
+   Where 1,2,3,4,5,6 represents “year”.
+
+#### 28. You are given a dataset consisting of variables having more than 30% missing values? Let’s say, out of 50 variables, 8 variables have missing values higher than 30%. How will you deal with them?
+   - We can deal with them in the following ways:
+   1. Assign a unique category to missing values, who knows the missing values might decipher some trend
+   2. We can remove them blatantly.
+   Or, we can sensibly check their distribution with the target variable, and if found any pattern we’ll keep those missing values and assign them a new category while removing others.
+
+#### 29. ‘People who bought this, also bought…’ recommendations seen on amazon is a result of which algorithm?
+   - The basic idea for this kind of recommendation engine comes from collaborative filtering.
+   - Collaborative Filtering algorithm considers “User Behavior” for recommending items. They exploit behavior of other users and items in terms of transaction history, ratings, selection and purchase information. Other users behaviour and preferences over the items are used to recommend items to the new users. In this case, features of the items are not known.
+
+#### 30. What do you understand by Type I vs Type II error ?
+   - Type I error is committed when the null hypothesis is true and we reject it, also known as a ‘False Positive’. Type II error is committed when the null hypothesis is false and we accept it, also known as ‘False Negative’.
+   - In the context of confusion matrix, we can say Type I error occurs when we classify a value as positive (1) when it is actually negative (0). Type II error occurs when we classify a value as negative (0) when it is actually positive(1).
+   -    <img src="https://user-images.githubusercontent.com/20341930/164376941-ec405e83-849d-48dd-89a3-ac77857ad379.png" data-canonical-src="https://user-images.githubusercontent.com/20341930/164376941-ec405e83-849d-48dd-89a3-ac77857ad379.png" width="450" height="450" />
+
 
 
 ###### References/Sources:
