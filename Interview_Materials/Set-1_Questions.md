@@ -168,38 +168,57 @@
    - It has dimension restrictions. On the other hand, euclidean metric can be used in any space to calculate distance. Since, the data points can be present in any dimension, euclidean distance is a more viable option.
    - Example: Think of a chess board, the movement made by a bishop or a rook is calculated by manhattan distance because of their respective vertical & horizontal movements.
 
-#### 34. Question
-   - Answer
+#### 34. Explain machine learning to me like a 5 year old.
+   - It’s simple. It’s just like how babies learn to walk. Every time they fall down, they learn (unconsciously) & realize that their legs should be straight and not in a bend position. The next time they fall down, they feel pain. They cry. But, they learn ‘not to stand like that again’. In order to avoid that pain, they try harder. To succeed, they even seek support from the door or wall or anything near them, which helps them stand firm.
+   - This is how a machine works & develops intuition from its environment.
+   - *Note: The interview is only trying to test if have the ability of explain complex concepts in simple terms.*
 
-#### 35. Question
-   - Answer
+#### 35. I know that a linear regression model is generally evaluated using Adjusted R² or F value. How would you evaluate a logistic regression model?
+   - We can use the following methods:
+   1. Since logistic regression is used to predict probabilities, we can use AUC-ROC curve along with confusion matrix to determine its performance.
+   2. Also, the analogous metric of adjusted R² in logistic regression is AIC. AIC is the measure of fit which penalizes model for the number of model coefficients. Therefore, we always prefer model with minimum AIC value.
+   3. Null Deviance indicates the response predicted by a model with nothing but an intercept. Lower the value, better the model. Residual deviance indicates the response predicted by a model on adding independent variables. Lower the value, better the model.
 
-#### 36. Question
-   - Answer
+#### 36. Considering the long list of machine learning algorithm, given a data set, how do you decide which one to use?
+   - You should say, the choice of machine learning algorithm solely depends of the type of data. If you are given a data set which is exhibits linearity, then linear regression would be the best algorithm to use. If you given to work on images, audios, then neural network would help you to build a robust model.
+   - If the data comprises of non linear interactions, then a boosting or bagging algorithm should be the choice. If the business requirement is to build a model which can be deployed, then we’ll use regression or a decision tree model (easy to interpret and explain) instead of black box algorithms like SVM, GBM etc.
+   - In short, there is no one master algorithm for all situations. We must be scrupulous enough to understand which algorithm to use.
 
-#### 37. Question
-   - Answer
+#### 37. Do you suggest that treating a categorical variable as continuous variable would result in a better predictive model?
+   - For better predictions, categorical variable can be considered as a continuous variable only when the variable is ordinal in nature.
 
-#### 38. Question
-   - Answer
+#### 38. When does regularization becomes necessary in Machine Learning?
+   - Regularization becomes necessary when the model begins to ovefit / underfit. This technique introduces a cost term for bringing in more features with the objective function. Hence, it tries to push the coefficients for many variables to zero and hence reduce cost term. This helps to reduce model complexity so that the model can become better at predicting (generalizing).
 
-#### 39. Question
-   - Answer
+#### 39. What do you understand by Bias Variance trade off?
+   - The error emerging from any model can be broken down into three components mathematically. Following are these component :
+   - **Bias error** is useful to quantify how much on an average are the predicted values different from the actual value. A high bias error means we have a under-performing model which keeps on missing important trends. 
+   - **Variance** on the other side quantifies how are the prediction made on same observation different from each other. A high variance model will over-fit on your training population and perform badly on any observation beyond training.
 
-#### 40. Question
-   - Answer
+#### 40. OLS is to linear regression. Maximum likelihood is to logistic regression. Explain the statement.
+   - OLS and Maximum likelihood are the methods used by the respective regression methods to approximate the unknown parameter (coefficient) value. In simple words,
+   - Ordinary least square(OLS) is a method used in linear regression which approximates the parameters resulting in minimum distance between actual and predicted values. Maximum Likelihood helps in choosing the the values of parameters which maximizes the likelihood that the parameters are most likely to produce observed data.
 
-#### 41. Question
-   - Answer
+#### 41. Which plot to use when?
+   - Its based on the problem. However, there is a framework to select the correct one.
 
-#### 42. Question
-   - Answer
+#### 42. What is the data leackage and when this happens?
+    1. When our training data has some bits of test data set. 
+    2. When some features are highly/directly corelated with Target Variable. (Not with other features).
+         - Like for an example. For task of predicting the person having medical condition.
+         - If we have a feature like a Surgery (Yes/No) → then it is directly related to having medical condition.
+         - Where model training will remember this relation and it won’t be generalizing the model.
+         - Resulting in less accurate on test/reallife unseen data.
+    3. Read this thouroghly: [https://www.analyticsvidhya.com/blog/2021/07/data-leakage-and-its-effect-on-the-performance-of-an-ml-model/](https://www.analyticsvidhya.com/blog/2021/07/data-leakage-and-its-effect-on-the-performance-of-an-ml-model/)
 
-#### 43. Question
-   - Answer
+#### 43.  What is the Pickle file & How the Model is saved to avoid retraining data to other system?
+   - The python `[pickle](https://docs.python.org/3/library/pickle.html#module-pickle)` module implements binary protocols for serializing and de-serializing a Python object structure. 
+   - *“Pickling”* is the process whereby a Python object hierarchy is converted into a byte stream, and *“unpickling”* is the inverse operation, whereby a byte stream (from a [binary file](https://docs.python.org/3/glossary.html#term-binary-file) or [bytes-like object](https://docs.python.org/3/glossary.html#term-bytes-like-object)) is converted back into an object hierarchy. Pickling (and unpickling) is alternatively known as “serialization”, “marshalling,” or “flattening”; however, to avoid confusion, the terms used here are “pickling” and “unpickling”.
 
-#### 44. Question
-   - Answer
+#### 44. Why numpy is faster than normal python list?
+   - Numpy has one restriction for list/array that it needs to have the same type of all the element of same numpy array unlike python list.
+   - Due to this, Numpy can use this at advantage to make it more faster for opoeration using underliying language with this assumption/truth. Numpy uses low level language C in the backend operation to make it faster.
+   - Also using normal list, you will have to perform the operation on list using FOR/loops, which has restriction of working one element at a time. Which makes it terribly slow for the maths operation even with constrain of same type.
 
 
 ###### References/Sources:
