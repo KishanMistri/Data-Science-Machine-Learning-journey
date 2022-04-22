@@ -155,6 +155,51 @@
    - In the context of confusion matrix, we can say Type I error occurs when we classify a value as positive (1) when it is actually negative (0). Type II error occurs when we classify a value as negative (0) when it is actually positive(1).
    -    <img src="https://user-images.githubusercontent.com/20341930/164376941-ec405e83-849d-48dd-89a3-ac77857ad379.png" data-canonical-src="https://user-images.githubusercontent.com/20341930/164376941-ec405e83-849d-48dd-89a3-ac77857ad379.png" width="450" height="450" />
 
+#### 31. You are working on a classification problem. For validation purposes, you’ve randomly sampled the training data set into train and validation. You are confident that your model will work incredibly well on unseen data since your validation accuracy is high. However, you get shocked after getting poor test accuracy. What went wrong?
+   - In case of classification problem, we should always use stratified sampling instead of random sampling. A random sampling doesn’t takes into consideration the proportion of target classes. 
+   - On the contrary, stratified sampling helps to maintain the distribution of target variable in the resultant distributed samples also.
+
+#### 32. You have been asked to evaluate a regression model based on R², adjusted R² and tolerance. What will be your criteria?
+   - Tolerance (1 / VIF(Variance Inflation Factor)) is used as an indicator of multicollinearity. It is an indicator of percent of variance in a predictor which cannot be accounted by other predictors. Large values of tolerance is desirable.
+   - We will consider adjusted R² as opposed to R² to evaluate model fit because R² increases irrespective of improvement in prediction accuracy as we add more variables. But, adjusted R² would only increase if an additional variable improves the accuracy of model, otherwise stays same. It is difficult to commit a general threshold value for adjusted R² because it varies between data sets. For example: a gene mutation data set might result in lower adjusted R² and still provide fairly good predictions, as compared to a stock market data where lower adjusted R² implies that model is not good.
+
+#### 33.  In k-means or kNN, we use euclidean distance to calculate the distance between nearest neighbors. Why not manhattan distance ?
+   - We don’t use manhattan distance because it calculates distance horizontally or vertically only. 
+   - It has dimension restrictions. On the other hand, euclidean metric can be used in any space to calculate distance. Since, the data points can be present in any dimension, euclidean distance is a more viable option.
+   - Example: Think of a chess board, the movement made by a bishop or a rook is calculated by manhattan distance because of their respective vertical & horizontal movements.
+
+#### 34. Question
+   - Answer
+
+#### 35. Question
+   - Answer
+
+#### 36. Question
+   - Answer
+
+#### 37. Question
+   - Answer
+
+#### 38. Question
+   - Answer
+
+#### 39. Question
+   - Answer
+
+#### 40. Question
+   - Answer
+
+#### 41. Question
+   - Answer
+
+#### 42. Question
+   - Answer
+
+#### 43. Question
+   - Answer
+
+#### 44. Question
+   - Answer
 
 
 ###### References/Sources:
