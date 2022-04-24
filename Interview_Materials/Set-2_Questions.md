@@ -98,35 +98,86 @@
 #### 11. Which of these will be doing more computations GD or SGD ?
     - In both gradient descent (GD) and stochastic gradient descent (SGD), you update a set of parameters in an iterative
     manner to minimize an error function.
+    
     - While in GD, you have to run through ALL the samples in your training set to do a single update for a parameter in 
     a particular iteration, in SGD, on the other hand, you use ONLY ONE or SUBSET of training sample from your training set 
     to do the update for a parameter in a particular iteration. If you use SUBSET, it is called Minibatch Stochastic gradient Descent.
+    
     - Thus, if the number of training samples are large, in fact very large, then using gradient descent may take too long because 
     in every iteration when you are updating the values of the parameters, you are running through the complete training set. On the 
-    other hand, using SGD will be faster because you use only one training sample and it starts improving itself right away from the first sample.
+    other hand, using SGD will be faster because you use only one training sample and it starts improving itself 
+    right away from the first sample.
+    
     - SGD often converges much faster compared to GD but the error function is not as well minimized as in the case of GD. Often in 
-    most cases, the close approximation that you get in SGD for the parameter values are enough because they reach the optimal values and keep oscillating there.
+    most cases, the close approximation that you get in SGD for the parameter values are enough 
+    because they reach the optimal values and keep oscillating there.
+    
     - If you need an example of this with a practical case, check Andrew NG's notes here where he clearly shows you the steps involved 
     in both the cases. [cs229-notes](https://web.archive.org/web/20180618211933/http://cs229.stanford.edu/notes/cs229-notes1.pdf)
     
 #### 12. If A is a matrix of size (3,3) and B is a matrix of size (3,4) how many numbers of multiplications that can happen in the operations A*B ?
-    - Answer
+    - [A]i,j [B] j,k => [AB]i,k
+    - Multiplication => i x j x k
+    - 3 x 3 x 4 => 36
     
 #### 13. What is the optimization equation of Logistic Regression ?
     - Answer
     
-#### 14. How will you calculate the P(x/y=0) in case of gaussian naive baiyes ?
-    - Answer
+#### 14. How will you calculate the P(x|y=0) in case of gaussian naive baiyes ?
+    - Here I have Probability of X ,given label/Class of Y = 0
+    - Get the set of data where label Y == 0, Checking how much of them has value X for feature. That will be the Answer
+    - Example:
+      
+![image](https://user-images.githubusercontent.com/20341930/164971163-e3a1e941-5f03-47c4-b52a-2f76d0eae53a.png)
+ 
+    - Here Play tennis Yes=1 & No=0
+    - P(Y=1) = 9/14 P(Y=0) = 5/14
+    - Let's say feature X = Wind (1= Strong & 0 = Week)
+    - P(X=1 | Y=0) = Probability of Strong Wind(x), given that we don't want play tennis outside => 3/5
     
 #### 15. Write the code for proportional sampling.
-    - Answer
+    - Proportional sampling is the method of picking an element proportional to its weight, i.e., the higher the weight of the object, the better are its chances of being selected.
+    - Code: 
+    ```
+    ```
 
-#### X. Question
+#### 16. What are hyperparameters in kernel svm ?
     - Answer
-    
+ 
+#### 17. What are hyperparameters in SGD with hinge loss ?
+    - Answer
+ 
+#### 18. Is hinge loss differentiable if not how we will modify it so that you apply SGD ?
+    - Answer
+ 
+#### 19. Difference between ADAM vs RMSPROP ?
+    - Answer
+ 
+#### 20. What is RMSPROP?
+    - Answer
+ 
+#### 21. What is ADAM ?
+    - Answer
+ 
+#### 22. What is the maximum and minimum values of gradient of the sigmoid function ?
+    - Answer
+ 
+#### 23. What is RELU? Is it differentiable ?
+    - Answer
+ 
+#### 24. What is F1 score ?
+    - Answer
+ 
+#### 25. What is precission and recall ?
+    - Answer
+ 
+#### 26. Name a few weight initialization techniques ?
+    - Answer
+ 
+
    
 ###### References/Sources:
-1. 
+1. [AppliedRoot](https://appliedroots.com/)
 
 ---
 
