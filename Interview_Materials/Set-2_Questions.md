@@ -1,5 +1,23 @@
 #### 1. What is the optimization equation of GBDT ?
-    - Answer
+    - The objective function is usually defined in the following form:
+![image](https://user-images.githubusercontent.com/20341930/164965638-374dad2a-b4fd-4a51-aea4-5f32dcd1f3d3.png)
+    
+    - Among them, L is a loss function, which is used to measure the quality of model fitting training data; Omega is called 
+    a regular term, which is used to measure the complexity of the learned model.
+    
+    - The GBDT algorithm can be regarded as an addition model consisting of K trees.
+![image](https://user-images.githubusercontent.com/20341930/164965693-c7c026d9-9f2b-42ad-9e49-9a16a3aa043f.png)
+![image](https://user-images.githubusercontent.com/20341930/164965735-b9c102b0-4cc3-41aa-8517-048f5afaf2b2.png)
+
+![image](https://user-images.githubusercontent.com/20341930/164965777-f1143c00-41ab-4d04-9619-fa3bd6f7bd08.png)
+
+    - For example, assuming that the loss function is square loss, the objective function is:
+![image](https://user-images.githubusercontent.com/20341930/164965782-d37641ca-aea0-47f1-86dd-5bc78ddba8a9.png)
+
+    - Among them, It is residual. Therefore, when using the square loss function, each step of the GBDT algorithm only needs to fit 
+    the residual of the previous model when generating the decision tree.   
+![image](https://user-images.githubusercontent.com/20341930/164965813-a9411c08-00ba-45ce-8b54-cc74e0fc7f3e.png)
+
     
 #### 2. Write the formulation of hinge loss ?
     - Hinge loss is written as 
@@ -38,10 +56,17 @@
     - Answer
     
 #### 10. Can we solve dimensionality reduction with SGD?
-    - Answer
+    - Yes
+    - Explain LDA (Minimize distance of same class & Maximize distance with other class) & PCA basic (Minimize distances to 
+    other points, so no class level segregation in PCA)
+    - https://stats.stackexchange.com/questions/427339/how-can-one-implement-pca-using-gradient-descent
     
 #### 11. Which of these will be doing more computations GD or SGD ?
-    - Answer
+   - In both gradient descent (GD) and stochastic gradient descent (SGD), you update a set of parameters in an iterative manner to minimize an error function.
+   - While in GD, you have to run through ALL the samples in your training set to do a single update for a parameter in a particular iteration, in SGD, on the other hand, you use ONLY ONE or SUBSET of training sample from your training set to do the update for a parameter in a particular iteration. If you use SUBSET, it is called Minibatch Stochastic gradient Descent.
+   - Thus, if the number of training samples are large, in fact very large, then using gradient descent may take too long because in every iteration when you are updating the values of the parameters, you are running through the complete training set. On the other hand, using SGD will be faster because you use only one training sample and it starts improving itself right away from the first sample.
+   - SGD often converges much faster compared to GD but the error function is not as well minimized as in the case of GD. Often in most cases, the close approximation that you get in SGD for the parameter values are enough because they reach the optimal values and keep oscillating there.
+   - If you need an example of this with a practical case, check Andrew NG's notes here where he clearly shows you the steps involved in both the cases. [cs229-notes](https://web.archive.org/web/20180618211933/http://cs229.stanford.edu/notes/cs229-notes1.pdf)
     
 #### 12. If A is a matrix of size (3,3) and B is a matrix of size (3,4) how many numbers of multiplications that can happen in the operations A*B ?
     - Answer
@@ -55,7 +80,10 @@
 #### 15. Write the code for proportional sampling.
     - Answer
 
-
+#### X. Question
+    - Answer
+    
+   
 ###### References/Sources:
 1. 
 
@@ -63,4 +91,4 @@
 
 #### Question_Template
 #### X. Question
-   - Answer
+    - Answer
