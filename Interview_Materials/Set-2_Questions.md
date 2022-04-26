@@ -7,6 +7,7 @@
     
     - The GBDT algorithm can be regarded as an addition model consisting of K trees.
 ![image](https://user-images.githubusercontent.com/20341930/164965693-c7c026d9-9f2b-42ad-9e49-9a16a3aa043f.png)
+
 ![image](https://user-images.githubusercontent.com/20341930/164965735-b9c102b0-4cc3-41aa-8517-048f5afaf2b2.png)
 
 ![image](https://user-images.githubusercontent.com/20341930/164965777-f1143c00-41ab-4d04-9619-fa3bd6f7bd08.png)
@@ -48,7 +49,13 @@
     - During the training phase, we have to construct the k-d tree. 
     
 #### 6. How will you regularize the KNN model ?
-    - Answer
+    - There are many forms of regularization: ℓ1, ℓ2, early stopping, dropout, etc. kNN is a nonparametric model,
+    it doesn't have parameters to penalize, drop, or way to stop training earlier.
+    
+    - The main point of regularization is preventing overfitting. The way to prevent overfitting in kNN is 
+    to increase k as it leads to averaging over many points instead of memorizing the training set as in k=1. 
+    It also makes the result smoother, because of averaging, which is another common consequence of regularization. 
+    A similar approach is used in decision trees where we restrict depth, minimal node size, or prune them, as means of regularization.
     
 #### 7. Which of these model are preferable when we have low complexity power ? [While predicting - In general cases]
       1. SVM      2. KNN      3. Linear Regressions       4. XGBoost
@@ -83,11 +90,9 @@
     
    
 #### 9. How will you regularise your naive bayes model ?
-    - Handle Missing Values if there are any.
     - Use Boosting if you want high performance as well.
 
 ![image](https://user-images.githubusercontent.com/20341930/164969720-8e83a253-3023-4182-add2-2f94b291a8a7.png)
-
     
 #### 10. Can we solve dimensionality reduction with SGD?
     - Yes
@@ -121,7 +126,11 @@
     - 3 x 3 x 4 => 36
     
 #### 13. What is the optimization equation of Logistic Regression ?
-    - Answer
+    - Logistic function to solve problem. Where Sigma is Sigmoid function applied to given equation.
+![image](https://user-images.githubusercontent.com/20341930/165239325-23479dfa-e8d7-4589-a7b1-07535274ebee.png)
+
+![image](https://user-images.githubusercontent.com/20341930/165239352-d874d179-fc8a-4d17-9245-eb2be60222bb.png)
+
     
 #### 14. How will you calculate the P(x|y=0) in case of gaussian naive baiyes ?
     - Here I have Probability of X ,given label/Class of Y = 0
@@ -145,10 +154,11 @@
     - Answer
  
 #### 17. What are hyperparameters in SGD with hinge loss ?
-    - Answer
+    - the regularization parameter (the alpha)
+    - the number of iterations (n_iter)
  
-#### 18. Is hinge loss differentiable if not how we will modify it so that you apply SGD ?
-    - Answer
+#### 18. Is hinge loss differentiable? if not, how we will modify it so that you can apply SGD ?
+    - 
  
 #### 19. Difference between ADAM vs RMSPROP ?
     - Answer
@@ -165,12 +175,14 @@
 #### 23. What is RELU? Is it differentiable ?
     - Answer
  
-#### 24. What is F1 score ?
+#### 24. What is precission and recall ?
     - Answer
  
-#### 25. What is precission and recall ?
-    - Answer
- 
+#### 25. What is F1 score ?
+    - F1 score is a mathematical measure that combines Precision & Recall.
+    
+![image](https://user-images.githubusercontent.com/20341930/165241845-2c30e40f-be9e-4bd3-bd8e-7874ed482a21.png)
+
 #### 26. Name a few weight initialization techniques ?
     - Answer
  
