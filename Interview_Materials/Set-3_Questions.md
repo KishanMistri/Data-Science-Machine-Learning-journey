@@ -1,196 +1,77 @@
-#### 1. 
+#### 27. Which of these will have more numbers of tunable parameters?
+```
+1. 7,7,512) ⇒ flatern ⇒ Dense(512)
+2. (7,7,512) ⇒ Conv (512,(7,7))
+``` 
     - Answer
     
-#### 1. 
+#### 28. What is overfitting and underfitting ? 
     - Answer
     
-#### 1. 
+#### 29. What do you do if a deep learning model is overfitting? 
     - Answer
     
-#### 1. 
+#### 30. What is the batch Normalization layer ? 
     - Answer
     
-#### 1. 
+#### 31. Write keras code to add a BN layer in an existing network ?
     - Answer
     
-#### 1. 
+#### 32. Number of tunable parameters in the BN layer. 
     - Answer
     
-#### 1. 
+#### 33. What is convolution operation? 
     - Answer
     
-#### 1. 
+#### 34. Number of parameters in a convolution neural network given in architecture 
     - Answer
     
-#### 1. 
+#### 35. What are the inputs required to calculate the average f1 score ? 
     - Answer
     
-#### 1. 
+#### 36. What macro average f1 score for 5 class classification problem. 
     - Answer
     
-#### 1. 
+#### 37. How do you get probabilities for RF classifier outputs. 
     - Answer
     
-#### 1. 
+#### 38. Is the Calibration classifier required to get probability values for logistic regression.? 
     - Answer
     
-#### 1. 
+#### 39. How does kernel sum work in test time ? 
     - Answer
     
-#### 1. 
+#### 40. What kind of base learners are preferable in random forest classifiers ? 
     - Answer
     
-#### 1. 
+#### 41. How does bootstraping works in RF classification. 
     - Answer
     
-#### 1. 
+#### 42. Difference between one vs rest and one vs one. 
     - Answer
     
-#### 2. 
+#### 43. Which one is better is one vs rest and one vs one. 
     - Answer
     
-#### 3. 
+#### 44. What will happen if gamma increases in RBF kernel sum. 
     - Answer
     
-#### 4. 
+#### 45. Explain linear regression. 
     - Answer
     
-#### 5. 
+#### 46. What is difference between one hot encoding and a binary bow? 
     - Answer
     
-#### 6. 
+#### 47. Kernal svm and linear svm ( SGD classifier with hinge loss). Whch has low latency and why. 
     - Answer
     
-#### 7. 
+#### 48. Explain bayes theorem. 
     - Answer
     
-#### 8. 
+#### 49. How to decrease the test time complexity of a logistic regression model. 
     - Answer
     
-#### 9. 
-    - Answer
-    
-#### 10. 
-    - Answer
-    
-#### 11. 
-    - Answer
-    
-#### 12. 
-    - Answer
-    
-#### 13. 
-    - Answer
-    
-#### 14. 
-    - Answer
-    
-#### 15. 
-    - Answer
-    
-#### 16. 
-    - Answer
-    
-#### 17. 
-    - Answer
-    
-#### 18. 
-    - Answer
-    
-#### 19. 
-    - Answer
-    
-#### 20. 
-    - Answer
-    
-#### 21. 
-    - Answer
-    
-#### 22. 
-    - Answer
-    
-#### 23. 
-    - Answer
-    
-#### 24. 
-    - Answer
-    
-#### 25. 
-    - Answer
-    
-#### 26. 
-    - Answer
-    
-#### 27. 
-    - Answer
-    
-#### 28. 
-    - Answer
-    
-#### 29. 
-    - Answer
-    
-#### 30. 
-    - Answer
-    
-#### 31. 
-    - Answer
-    
-#### 32. 
-    - Answer
-    
-#### 33. 
-    - Answer
-    
-#### 34. 
-    - Answer
-    
-#### 35. 
-    - Answer
-    
-#### 36. 
-    - Answer
-    
-#### 37. 
-    - Answer
-    
-#### 38. 
-    - Answer
-    
-#### 39. 
-    - Answer
-    
-#### 40. 
-    - Answer
-    
-#### 41. 
-    - Answer
-    
-#### 42. 
-    - Answer
-    
-#### 43. 
-    - Answer
-    
-#### 44. 
-    - Answer
-    
-#### 45. 
-    - Answer
-    
-#### 46. 
-    - Answer
-    
-#### 47. 
-    - Answer
-    
-#### 48. 
-    - Answer
-    
-#### 49. 
-    - Answer
-    
-#### 50. 
+#### 50. What is the need for sigmoid function in logistic regression. 
     - Answer
     
 
