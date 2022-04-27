@@ -1,196 +1,174 @@
-#### 1. 
+#### 1. Why we need Calibration ?
     - Answer
     
-#### 1. 
+#### 2. What is MAP ? (mean average precision)
     - Answer
     
-#### 1. 
+#### 3. Why do we need gated mechanism in LSTM ?
     - Answer
     
-#### 1. 
+#### 4. What is stratified sampling ? Explain.
     - Answer
     
-#### 1. 
+#### 5. How do you compare two distributions ?
     - Answer
     
-#### 1. 
+#### 6. What will happen to train time of K means of data is very high dimension.
     - Answer
     
-#### 1. 
+#### 7. If you have 10mill records with 100dimension each for a clustering task. Which algorithm will you try first and why ?
     - Answer
     
-#### 1. 
+#### 8. What is matrix Factorization? Explain with an Example.
     - Answer
     
-#### 1. 
+#### 9. Which algorithm will give high time complexity if you have 10million records for a clustering task.
     - Answer
     
-#### 1. 
-    - Answer
-    
-#### 1. 
-    - Answer
-    
-#### 1. 
-    - Answer
-    
-#### 1. 
-    - Answer
-    
-#### 1. 
-    - Answer
-    
-#### 1. 
-    - Answer
-    
-#### 1. 
-    - Answer
-    
-#### 2. 
-    - Answer
+#### 10. Difference between GD and SGD.
+    - Both algorithms are methods for finding a set of parameters that minimize a loss function by evaluating 
+    parameters against data and then making adjustments.
     
-#### 3. 
-    - Answer
-    
-#### 4. 
-    - Answer
-    
-#### 5. 
-    - Answer
-    
-#### 6. 
-    - Answer
+    - In standard gradient descent, you’ll evaluate all training samples for each set of parameters. This is akin 
+    to taking big, slow steps toward the solution.
     
-#### 7. 
-    - Answer
-    
-#### 8. 
-    - Answer
-    
-#### 9. 
-    - Answer
+    - In stochastic gradient descent, you’ll evaluate only 1 training sample for the set of parameters before updating 
+    them. This is akin to taking small, quick steps toward the solution.
     
-#### 10. 
-    - Answer
+#### 11. Which one will you choose GD or SGD? Why ?
+    - GD theoretically minimizes the error function better than SGD. However, SGD converges much faster 
+    once the dataset becomes large.
     
-#### 11. 
-    - Answer
+    - That means GD is preferable for small datasets while SGD is preferable for larger ones.
+
+    - In practice, however, SGD is used for most applications because it minimizes the error function well enough 
+    while being much faster and more memory efficient for large datasets.
     
-#### 12. 
+#### 12. Why do we need repetitive training of a model ? 
     - Answer
     
-#### 13. 
+#### 13. How do you evaluate the model after productionization ?
     - Answer
     
-#### 14. 
+#### 14. What is need for laplace smoothing in N.B
     - Answer
     
-#### 15. 
+#### 15. Explain Gini impurity.
     - Answer
     
-#### 16. 
+#### 16. Explain entropy?
     - Answer
     
-#### 17. 
+#### 17. How to do multi-class classification with random forest ?
     - Answer
     
-#### 18. 
+#### 18. What is need for CV ?
     - Answer
     
-#### 19. 
+#### 19. What is k-fold cross validation ?
     - Answer
     
-#### 20. 
+#### 20. How do you to CV for a test classification problem using random search.
     - Answer
     
-#### 21. 
+#### 21. Assume We have very high dimension data. Which model will you try and which model will be better in a classification problem.
     - Answer
     
-#### 22. 
+#### 22. What is AUC?
     - Answer
     
-#### 23. 
+#### 23. Tell me one business case where recall is more important than precision. 
     - Answer
     
-#### 24. 
+#### 24. Tell me one business case where precision is more important.
     - Answer
     
-#### 25. 
-    - Answer
+#### 25. Can we use accuracy for very much imbalance data? If yes/no , why ?
+    - No, you should alway avoid using accuracy where the dataset is imbalance. 
+
+    - Because accuracy will give more generalized information of majority class only. 
+    It wil dominate and minority class might be completely misclassified though the accuracy won’t have much impact on it.
     
-#### 26. 
+#### 26. Difference between micro average F1 and macro average F1 for a 3 class classification. 
     - Answer
     
-#### 27. 
+#### 27. Difference between AUC and accuracy ?
     - Answer
     
-#### 28. 
+#### 28. How do we calculate AUC for a multiclass classification.
     - Answer
     
-#### 29. 
+#### 29. Test the complexity of Kernel sum ?
     - Answer
     
-#### 30. 
+#### 30. Can we use TSNE for dimensionality reduction i.e convest the data n to d dimension.
     - Answer
     
-#### 31. 
+#### 31. What is pearson correlation coefficient ?
     - Answer
     
-#### 32. 
+#### 32. Training time complexity of naive bayes ?
     - Answer
     
-#### 33. 
+#### 33. 83. Numbers of tunable parameters in maxpooling layer ?
+```
+    1. (100,50) -> Embeddylayer (36) -> output shape ?
+```
     - Answer
     
-#### 34. 
+#### 34. Number of tunable parameters in embedding layer (36, vocab size = 75)
     - Answer
     
-#### 35. 
+#### 35. Relation between KNN and kernel sum ?
     - Answer
     
-#### 36. 
+#### 36. 86. Which is faster
+```
+    1. SVC(C=1). Fit(x,y)
+    2. SGD(Log=hinge).fit(x,y)
+```
     - Answer
     
-#### 37. 
+#### 37. Explain about KS test ?
     - Answer
     
-#### 38. 
+#### 38. What is KL divergence ?
     - Answer
     
-#### 39. 
+#### 39. How QQ plot works ?
     - Answer
     
-#### 40. 
+#### 40. What is the need of confidence interval ?
     - Answer
     
-#### 41. 
+#### 41. How do you find the out outliers in the given data set ?
     - Answer
     
-#### 42. 
+#### 42. Can you name a few sorting algorithms and their complexity ?
     - Answer
     
-#### 43. 
+#### 43. What is the time complexity of ”a in list ( )” ?
     - Answer
     
-#### 44. 
+#### 44. What is the time complexity of “a in set ( ) “?
     - Answer
     
-#### 45. 
+#### 45. What is percentile ?
     - Answer
     
-#### 46. 
+#### 46. What is IQR ?
     - Answer
     
-#### 47. 
+#### 47. How do you calculate the length of the string that is available in the data frame column ?
     - Answer
     
-#### 48. 
+#### 48. Can you explain the dict.get() function ?
     - Answer
     
-#### 49. 
+#### 49. Is list is hash table ?
     - Answer
     
-#### 50. 
+#### 50. Is tuple is hash table ?
     - Answer
     
 
