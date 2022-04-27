@@ -1,196 +1,151 @@
-#### 1. 
+#### 1. Which central tendency method is used if there exist any outliers?
     - Answer
     
-#### 1. 
+#### 2. Explain, What is Central limit theorem?
     - Answer
     
-#### 1. 
+#### 3. What is Chi-Square test?
     - Answer
     
-#### 1. 
+#### 4. What is A/B testing?
     - Answer
     
-#### 1. 
+#### 5. Tell us the difference between Z and t distribution (Linked to A/B testing)?
     - Answer
     
-#### 1. 
+#### 6. Tell some outlier treatment methods.
     - Answer
     
-#### 1. 
+#### 7. What is ANOVA test?
     - Answer
     
-#### 1. 
+#### 8. What is Cross validation?
     - Answer
     
-#### 1. 
+#### 9. How will you work in a machine learning project if there is a huge imbalance in the data?
     - Answer
     
-#### 1. 
+#### 10. Tell the formula of sigmoid function.
     - Answer
     
-#### 1. 
+#### 11. Can we use sigmoid function in case of multiple classifications?
     - Answer
     
-#### 1. 
+#### 12. What is Area under the curve (AUC)?
     - Answer
     
-#### 1. 
+#### 13. Which metric is used to split a node in Decision Tree?
     - Answer
     
-#### 1. 
+#### 14. Explain ensemble learning?
     - Answer
     
-#### 1. 
+#### 15. What is P value?
     - Answer
     
-#### 1. 
+#### 16. What are histograms?
     - Answer
     
-#### 2. 
+#### 17. Tell us about confidence interval?
     - Answer
     
-#### 3. 
+#### 18. What’s the reason for high bias or variance?
     - Answer
     
-#### 4. 
+#### 19. Which models are generally high biased or high variances?
     - Answer
     
-#### 5. 
+#### 20. Why do we select validation data other than test data?
     - Answer
     
-#### 6. 
+#### 21. What are the differences between linear and logistic regression?
     - Answer
     
-#### 7. 
+#### 22. Why do we take such a complex cost function for logistic regression?
     - Answer
     
-#### 8. 
+#### 23. Differentiate between random forest and decision tree?
     - Answer
     
-#### 9. 
+#### 24. How would you decide when to stop splitting the tree?
     - Answer
     
-#### 10. 
+#### 25. What are the measures of central tendency?
     - Answer
     
-#### 11. 
+#### 26. What is the requirement of k means algorithm?
     - Answer
     
-#### 12. 
+#### 27. Which clustering technique uses combination of clusters?
     - Answer
     
-#### 13. 
+#### 28. Which is the oldest probability distribution?
     - Answer
     
-#### 14. 
+#### 29. What all values can a random variable take?
     - Answer
     
-#### 15. 
+#### 30. What are the different types of random variables?
     - Answer
     
-#### 16. 
+#### 31. Describe normality of residuals.
     - Answer
     
-#### 17. 
+#### 32. What is T-test used for?
     - Answer
     
-#### 18. 
+#### 33. How do you perform dimensionality reduction?
     - Answer
     
-#### 19. 
+#### 34. What are the assumptions of linear regression algorithm?
     - Answer
     
-#### 20. 
+#### 35. Differentiate between Correlation and covariance.
     - Answer
     
-#### 21. 
+#### 36. How to identify & treat outliers and missing values?
     - Answer
     
-#### 22. 
+#### 37. Explain Box and whisker plot.
     - Answer
     
-#### 23. 
+#### 38. Explain any unsupervised learning algorithm.
     - Answer
     
-#### 24. 
+#### 39. Describe Random Forest.
     - Answer
     
-#### 25. 
+#### 40. What packages in Python can be used for ML? Why do we prefer one over another?
     - Answer
     
-#### 26. 
+#### 41. What are the Evaluation Metric parameters for testing Logistic Regression?
     - Answer
     
-#### 27. 
+#### 42. NumPy vs Pandas basic difference.
     - Answer
     
-#### 28. 
+#### 43. Tuple vs Dictionary. Where do we use them?
     - Answer
     
-#### 29. 
+#### 44. What is NER(Named Entity Recognition)?
     - Answer
     
-#### 30. 
+#### 45. Can Linear Regression be used for Classification? If Yes, why if No why?
     - Answer
     
-#### 31. 
+#### 46. What is Naive Bayes Theorem? Multinomial, Bernoulli, Gaussian Naive Bayes.
     - Answer
     
-#### 32. 
+#### 47. Differentiate between Over Sampling and Under Sampling.
     - Answer
     
-#### 33. 
+#### 48. what is the different between Over Fitting and Under Fitting.
     - Answer
     
-#### 34. 
+#### 49. Differentiate between Gini Index and Entropy.
     - Answer
     
-#### 35. 
-    - Answer
-    
-#### 36. 
-    - Answer
-    
-#### 37. 
-    - Answer
-    
-#### 38. 
-    - Answer
-    
-#### 39. 
-    - Answer
-    
-#### 40. 
-    - Answer
-    
-#### 41. 
-    - Answer
-    
-#### 42. 
-    - Answer
-    
-#### 43. 
-    - Answer
-    
-#### 44. 
-    - Answer
-    
-#### 45. 
-    - Answer
-    
-#### 46. 
-    - Answer
-    
-#### 47. 
-    - Answer
-    
-#### 48. 
-    - Answer
-    
-#### 49. 
-    - Answer
-    
-#### 50. 
+#### 50. What are the advantages and disadvantages of PCA?
     - Answer
     
 
