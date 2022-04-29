@@ -11,7 +11,10 @@
     - Answer
     
 #### 5. What is the minimum and maximum value of tanh ?
-    - Answer
+    - tanh is hyperbolic tangent function whose value reside between -1 and +1.
+    
+![image](https://user-images.githubusercontent.com/20341930/165881784-bbba1fe6-e7d4-4204-83a0-fc5fb2c3ab50.png)
+
     
 #### 6. How many thresholds we need to check for a real valued features in DT ?
     - Answer
@@ -57,10 +60,11 @@
     - Regularization term = $(\lambda_1 * |W_i|_1) + (\lambda_2 * |W_i|_2)$
     
 #### 12. What are the assumption of NB ?
-    - Answer
+    - That all the features are conditionally independent. 
+    Which is not seen in real world, every feature has some kind of dependency (minimum/very low).
     
 #### 13. What are the assumptions of KNN ?
-    - Answer
+    - KNN uses neighborhood so basic assumption is that the point/data point in the close proximity is the basis of same class classification
     
 #### 14. What are the assumptions of linear regression ?
     - Answer
