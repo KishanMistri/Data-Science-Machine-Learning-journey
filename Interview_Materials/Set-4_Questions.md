@@ -10,10 +10,13 @@
 #### 4. What is stratified sampling ? Explain.
     - Problem with random sampling is that Random sampling does not provide the distribution of population of the whole data. 
     So algorithms performing on random sampling provide different results on the test data.
+    
     - It is done by dividing the population into subgroups or into strata, and the right number of instances 
     are sampled from each stratum to guarantee that the test set is representative of the entire population.
+    
     - Stratified sampling is different from simple random sampling, which involves the random selection of data from 
     the entire population so that each possible sample is equally likely to occur. 
+    
     - A random sample is taken from each stratum in direct proportion to the size of the stratum compared to the population, 
     so each possible sample is equally likely to occur.
     
@@ -54,6 +57,7 @@
     
 #### 12. Why do we need repetitive training of a model ? 
     - As time goes by, the metrics for accuracy/errors increases as the new data is shifting little bit than the original data we have trained our model with. So to continue to get the expected accuracy, we'll have to train the model with more recent data.
+    
     - How often retraining model is always depends on change in data, the point of acceptable performance metric and how often the time to get a new model.
     
 #### 13. How do you evaluate the model after productionization ?
@@ -98,6 +102,7 @@
     - No, you should alway avoid using accuracy where the dataset is imbalance. 
 
     - Because accuracy will give more generalized information of majority class only. 
+    
     It wil dominate and minority class might be completely misclassified though the accuracy won’t have much impact on it.
     
 #### 26. Difference between micro average F1 and macro average F1 for a 3 class classification. 
