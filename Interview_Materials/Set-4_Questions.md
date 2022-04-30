@@ -8,13 +8,21 @@
     - Answer
     
 #### 4. What is stratified sampling ? Explain.
-    - Answer
+    - Problem with random sampling is that Random sampling does not provide the distribution of population of the whole data. 
+    So algorithms performing on random sampling provide different results on the test data.
+    - It is done by dividing the population into subgroups or into strata, and the right number of instances 
+    are sampled from each stratum to guarantee that the test set is representative of the entire population.
+    - Stratified sampling is different from simple random sampling, which involves the random selection of data from 
+    the entire population so that each possible sample is equally likely to occur. 
+    - A random sample is taken from each stratum in direct proportion to the size of the stratum compared to the population, 
+    so each possible sample is equally likely to occur.
     
 #### 5. How do you compare two distributions ?
-    - Answer
+    1. QQ Plot
+    2. KS Test plot 
     
 #### 6. What will happen to train time of K means of data is very high dimension.
-    - Answer
+    - Anwer
     
 #### 7. If you have 10mill records with 100dimension each for a clustering task. Which algorithm will you try first and why ?
     - Answer
@@ -45,10 +53,13 @@
     while being much faster and more memory efficient for large datasets.
     
 #### 12. Why do we need repetitive training of a model ? 
-    - Answer
+    - As time goes by, the metrics for accuracy/errors increases as the new data is shifting little bit than the original data we have trained our model with. So to continue to get the expected accuracy, we'll have to train the model with more recent data.
+    - How often retraining model is always depends on change in data, the point of acceptable performance metric and how often the time to get a new model.
     
 #### 13. How do you evaluate the model after productionization ?
-    - Answer
+    - We can monitor metric that was used to train and evaluate the model.
+    - We can create plot of predicted and actual values to see the model prediction is not deviated from margin for production live data.
+    - The distribution of production data's predicted class with actual.
     
 #### 14. What is need for laplace smoothing in N.B
     - Answer
