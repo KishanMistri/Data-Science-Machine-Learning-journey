@@ -81,11 +81,6 @@
 #### 50. What is the need for sigmoid function in logistic regression. 
     - Answer
     
-
-   
-###### References/Sources:
-1. [AppliedRoot](https://appliedroots.com/)
-
 ---
 
 #### Question_Template
