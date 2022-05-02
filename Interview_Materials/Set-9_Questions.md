@@ -148,11 +148,6 @@
 #### 50. 
     - Answer
     
-
-   
-###### References/Sources:
-1. [AppliedRoot](https://appliedroots.com/)
-
 ---
 
 #### Question_Template
