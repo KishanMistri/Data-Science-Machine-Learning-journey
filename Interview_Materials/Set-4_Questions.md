@@ -25,16 +25,29 @@
     2. KS Test plot 
     
 #### 6. What will happen to train time of K means of data is very high dimension.
-    - Anwer
+    -  When the dimension increases it will have problem with the curse of dimensionality. As the number of dimensions tend to infinity 
+    the distance between any two points in the dataset converges. This means the maximum distance and minimum distance between any two 
+    points of your dataset will be the same.
+
+    - This is a big problem when you are using the euclidean distance in K-Means.
+
+    - One possible solution if you want to still use K-Means is to change the distance metric you use. I've used spherical K-Means,
+    based on the cosine distance with thousands of features without any problems. It is a method that can be used to extract features 
+    from images and has results comparable to Deep Learning methods. How about that for an Over-hyped algorithm?
+
+    - So if you have dimensions in the order of thousands or so try K-Means or Spherical K-Means and you will probably have a good solution. 
+    If you have many millions of dimensions then you need a subspace clustering algorithm or a dimensionality reduction technique before clustering.
     
 #### 7. If you have 10mill records with 100dimension each for a clustering task. Which algorithm will you try first and why ?
-    - Answer
+    1. K-Means handles well with large data because it has linear time complexity of O(n)
+    2. Hierarchical clustering is of order O(n2logn)
     
 #### 8. What is matrix Factorization? Explain with an Example.
-    - Answer
+    - Matrix factorization is a class of collaborative filtering algorithms used in recommender systems. Matrix factorization 
+    algorithms work by decomposing the user-item interaction matrix into the product of two lower dimensionality rectangular matrices.
     
 #### 9. Which algorithm will give high time complexity if you have 10million records for a clustering task.
-    - Answer
+    -  Hierarchical clustering gives the high time complexity of order O(n2logn)
     
 #### 10. Difference between GD and SGD.
     - Both algorithms are methods for finding a set of parameters that minimize a loss function by evaluating 
@@ -187,11 +200,6 @@
 #### 50. Is tuple is hash table ?
     - Answer
     
-
-   
-###### References/Sources:
-1. [AppliedRoot](https://appliedroots.com/)
-
 ---
 
 #### Question_Template
