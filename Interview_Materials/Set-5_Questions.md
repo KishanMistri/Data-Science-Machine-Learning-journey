@@ -198,11 +198,6 @@
 #### 50. What does it mean by precision of a model equal to zero is it possible to have precision equal to 0.
     - Answer
     
-
-   
-###### References/Sources:
-1. [AppliedRoot](https://appliedroots.com/)
-
 ---
 
 #### Question_Template
