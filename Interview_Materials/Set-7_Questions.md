@@ -180,11 +180,6 @@
 #### 50. What is central tendency?
     - Answer
     
-
-   
-###### References/Sources:
-1. [AppliedRoot](https://appliedroots.com/)
-
 ---
 
 #### Question_Template
