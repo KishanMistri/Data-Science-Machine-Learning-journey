@@ -148,11 +148,6 @@
 #### 50. What are the advantages and disadvantages of PCA?
     - Answer
     
-
-   
-###### References/Sources:
-1. [AppliedRoot](https://appliedroots.com/)
-
 ---
 
 #### Question_Template
