@@ -1,24 +1,16 @@
 #### 1. What is the optimization equation of GBDT ?
     - The objective function is usually defined in the following form:
 ![image](https://user-images.githubusercontent.com/20341930/164965638-374dad2a-b4fd-4a51-aea4-5f32dcd1f3d3.png)
+
+    - Algorithm for GBDT: [We have to find the optimum value of gamma(γ) such that the value of loss reduces]
     
-    - Among them, L is a loss function, which is used to measure the quality of model fitting training data; Omega is called 
-    a regular term, which is used to measure the complexity of the learned model.
-    
-    - The GBDT algorithm can be regarded as an addition model consisting of K trees.
-![image](https://user-images.githubusercontent.com/20341930/164965693-c7c026d9-9f2b-42ad-9e49-9a16a3aa043f.png)
+![image](https://user-images.githubusercontent.com/20341930/166418240-841c922c-20fb-4377-9b71-b48913c8fdfc.png)
 
-![image](https://user-images.githubusercontent.com/20341930/164965735-b9c102b0-4cc3-41aa-8517-048f5afaf2b2.png)
+[Want to checkout Example?](https://towardsdatascience.com/understanding-gradient-boosting-from-scratch-with-small-dataset-587592cc871f)
 
-![image](https://user-images.githubusercontent.com/20341930/164965777-f1143c00-41ab-4d04-9619-fa3bd6f7bd08.png)
-
-    - For example, assuming that the loss function is square loss, the objective function is:
-![image](https://user-images.githubusercontent.com/20341930/164965782-d37641ca-aea0-47f1-86dd-5bc78ddba8a9.png)
-
-    - Among them, It is residual. Therefore, when using the square loss function, each step of the GBDT algorithm only needs to fit 
-    the residual of the previous model when generating the decision tree.   
-![image](https://user-images.githubusercontent.com/20341930/164965813-a9411c08-00ba-45ce-8b54-cc74e0fc7f3e.png)
-
+    - General question from given answer: What is pseudoresidual and why we use it?
+    - It is a intermidiate error of the model. GBDT work on serial way current state is dependent on previous state of residual.
+    - They help us minimise any loss function of our choice until and up till the loss function is differentiable
     
 #### 2. Write the formulation of hinge loss ?
     - Hinge loss is written as 
@@ -73,6 +65,11 @@
 
 #### 8. What is Laplace smoothing ?
     - Laplace Smoothing / Additive Smoothing: [Not Laplacian Smoothing used in Image processing]
+    
+    - In naïve bayes if in the test data a category was not present in train data to avoid Problem of zero probability 
+    we use Laplace smoothing. We add a small value (alpha) in Numerator and k*alpha in the denominator where k is the number 
+    of values that a feature take.
+    
     - Q -> What will you do if the test word/feature is not present in train data?
     - Because without its probability, Total multiplication with this feature is 0 or 1 with respect to the class.
 
@@ -87,18 +84,24 @@
     - It will be applied to all points. It will work on points which are not present and give them avg probability (1/num of Classes)
     - It will result in ***Uniform distribution*** for your data points.
     - Technique used to [smooth](https://en.wikipedia.org/wiki/Smoothing) [categorical data](https://en.wikipedia.org/wiki/Categorical_data)
-    
    
 #### 9. How will you regularise your naive bayes model ?
-    - Use Boosting if you want high performance as well.
+    - alpha in Laplace smoothing will act as regularizer.
+    
+    - As alpha **increases** the likelihood probabilities will have uniform distribution i.e.  P(0)=0.5 and P(1)=0.5 thus 
+    the prediction will be biased towards larger class.
+    
+    - As alpha **decreases** even with the small change in the data will affect the probability. Thus, it leads to overfitting.
 
 ![image](https://user-images.githubusercontent.com/20341930/164969720-8e83a253-3023-4182-add2-2f94b291a8a7.png)
     
 #### 10. Can we solve dimensionality reduction with SGD?
-    - Yes
-    - Explain LDA (Minimize distance of same class & Maximize distance with other class) & PCA basic (Minimize distances to 
-    other points, so no class level segregation in PCA)
-    - https://stats.stackexchange.com/questions/427339/how-can-one-implement-pca-using-gradient-descent
+    - Yes because dimensionality reduction can be posed as an optimization problem where we try to reduce the loss function.
+```
+(||(Xi - Xj)||^2 -Xij )^2
+```
+    - here xi and xj are points in higher dimesion and xij is the distance between the points in lower dimension thus we 
+    prefer the neighborhood distance in the lower dimensions with minimal losses.
     
 #### 11. Which of these will be doing more computations GD or SGD ?
     - In both gradient descent (GD) and stochastic gradient descent (SGD), you update a set of parameters in an iterative
@@ -126,11 +129,8 @@
     - 3 x 3 x 4 => 36
     
 #### 13. What is the optimization equation of Logistic Regression ?
-    - Logistic function to solve problem. Where Sigma is Sigmoid function applied to given equation.
-![image](https://user-images.githubusercontent.com/20341930/165239325-23479dfa-e8d7-4589-a7b1-07535274ebee.png)
-
-![image](https://user-images.githubusercontent.com/20341930/165239352-d874d179-fc8a-4d17-9245-eb2be60222bb.png)
-
+ 
+![Logistic Regression weight based optimization equation](https://user-images.githubusercontent.com/20341930/166428703-5195c485-2c11-4b11-865c-18738edfedfd.png)
     
 #### 14. How will you calculate the P(x|y=0) in case of gaussian naive baiyes ?
     - Here I have Probability of X ,given label/Class of Y = 0
@@ -145,20 +145,35 @@
     - P(X=1 | Y=0) = Probability of Strong Wind(x), given that we don't want play tennis outside => 3/5
     
 #### 15. Write the code for proportional sampling.
-    - Proportional sampling is the method of picking an element proportional to its weight, i.e., the higher the weight of the object, the better are its chances of being selected.
-    - Code: 
+    - Proportional sampling is the method of picking an element proportional to its weight, i.e., the higher the weight of the object, 
+    the better are its chances of being selected.
+    - Psudocode: 
     ```
+    1. normailise all the values i.e the range will be (0,1)
+    2. calculate the cummulative sum .
+    3. Sample one ramdom value from unifrom distribution of (0,1)
+    4. If the random value <= cummulative sum return the number
     ```
 
 #### 16. What are hyperparameters in kernel svm ?
-    - Answer
+    - Be careful, There 2 form of SVM (Primal & Dual Form of SVM) 
+    - In Primal, there is no kernelization where we can have lambda or C as in hyper parameter. C= 1/Lambda
+    - In Dual Form of SVM kernel is itself a hyper parameter.
+      Dual form of SVM it can have kernalized formulation of SVM optimization equation.
+    - Based on the Kernel selected, there will be different appropriate hyperparameter. 
+    - Example : In RBF kernel we have σ as hyperpameter.
+[Please read this doc for checking out different kernels and their hyperparameter](https://philipppro.github.io/Hyperparameters_svm_/)
  
 #### 17. What are hyperparameters in SGD with hinge loss ?
     - the regularization parameter (the alpha)
     - the number of iterations (n_iter)
  
 #### 18. Is hinge loss differentiable? if not, how we will modify it so that you can apply SGD ?
-    - 
+    - Hinge loss is not differentiable at 1 as it is not continuous at 1. So, we use squared hinge loss in optimizations. 
+    Or we can use smooth approximation for hinge loss as below.
+    
+![Modified version of hinge loss which is differentiable everywhere](https://user-images.githubusercontent.com/20341930/166430885-814f12e5-5eca-446d-9c01-293f18b9b810.png)
+
  
 #### 19. Difference between ADAM vs RMSPROP ?
     - Answer
@@ -170,13 +185,21 @@
     - Answer
  
 #### 22. What is the maximum and minimum values of gradient of the sigmoid function ?
-    - Answer
+    - Value of Sigmoid Function is between 0 to 1. So grediant => Slope of graph is shown as below.
+
+![Sigmoid and its gredient](https://user-images.githubusercontent.com/20341930/166431265-615f377c-57ba-41f2-a437-136431d9d5ef.png)
+
  
 #### 23. What is RELU? Is it differentiable ?
     - Answer
  
 #### 24. What is precission and recall ?
-    - Answer
+    - Precision tells us that out the total positive points how many of them are predicted to be positive.
+      Precision = TP/(TP + FP)
+       
+    - Recall tells us that out of total points that are predicted positive how many points are actually positive.
+      Recall = TP/(TP + FN)
+    
  
 #### 25. What is F1 score ?
     - F1 score is a mathematical measure that combines Precision & Recall.
