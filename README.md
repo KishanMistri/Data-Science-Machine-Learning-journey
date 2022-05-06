@@ -10,3 +10,5 @@ I haven't gone thorugh all of it yet but I am making steady progress which is mo
 Hope this helps you in the same way it helped me..!
 
 If you came and did all things listed here, I am a fan of you. But there is always a room of improvement. I am keeping extra reading section to put advance things as well. Feel free to suggest me few new things and make this repo mind blowing..!
+
+***Note: This is also maintained in Notion Pages linked at the end of each section/page. THe Notion pages has latest details as in each sections as new concepts added there first and then dumped here with proper formatting.***
