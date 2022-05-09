@@ -97,18 +97,43 @@ F(xq)=summation( [ αi * yi * kernel(xi ,xq) ] + b) for i=1 to n
     - In one hot encoding we take the number of times a category or word is repeated in the train set. When frequency matters.
     - In binary BOW we only take whether the category or word is present in train data (0 or 1). When presence matters.
     
-#### 47. Kernal svm and linear svm ( SGD classifier with hinge loss). Whch has low latency and why
-    - 
+#### 47. Kernal svm and linear svm ( SGD classifier with hinge loss). Whch has low latency and why?
+    - Linear SVM is faster because in linear SVM no kernelization is involved. Thus linear tries to operate in lower dim only 
+    where as kernel SVM tries to find higher dimensional features which takes time than linear SVM.
     
 #### 48. Explain bayes theorem. 
-    - Answer
+    - The Bayes theorem describes the probability of an event based on the prior knowledge of the conditions that might be 
+    related to the event. If we know the conditional probability , we can use the bayes rule to find out the reverse probabilities 
+
+![Bayes Theorem](https://user-images.githubusercontent.com/20341930/167345317-119dbd7a-96d3-4ff6-943c-d52ee646362c.png)
+
     
 #### 49. How to decrease the test time complexity of a logistic regression model. 
-    - Answer
+    - If we get a sparse Weight matrix. Creating the dictionary of Non-Zero feature weights and only calculate related 
+    will eventually increase performance.
     
 #### 50. What is the need for sigmoid function in logistic regression. 
-    - Answer
+    - Logistic regression works on the (Euclidean) distance of the points. So the distance is countably infinite numbers to keep 
+    them in range.
     
+![Optimization equation for LR](https://user-images.githubusercontent.com/20341930/167346370-44b2ecbf-7f62-4ba1-b1db-34804bb0e46b.png)
+
+    
+![2 plane for separation of 2 classes](https://user-images.githubusercontent.com/20341930/167346308-21c6c07d-f870-4395-9c9b-c253c52f7958.png)
+
+    - Here based on distance, optimization equation gives this output.
+    For plane-1 sum = 1+1+1+1+1+1+1+1–50 = -42
+    For plane-2 sum = 1+2+3+4–1–2–3–4+1 = 1
+    
+    - However, Plane 1 is better than Plane 2. But due to outlier it is creating issue for plane selection And We can overcome this 
+    by incorporating some function such that it has to squeeze the maximum distance points. one of such function is sigmoid. 
+    
+![Optimization Equation with Sigmoid](https://user-images.githubusercontent.com/20341930/167346749-a0f81418-ec3e-4f67-9130-2a038ddef0ea.png)
+
+
+![Final Form of LR optimization Equation](https://user-images.githubusercontent.com/20341930/167346785-4d7602d4-9a7f-4d97-ab64-ed0c341a0a56.png)
+
+
 ---
 
 #### Question_Template
