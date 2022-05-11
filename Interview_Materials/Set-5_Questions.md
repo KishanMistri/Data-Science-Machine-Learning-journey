@@ -1,14 +1,29 @@
 #### 1. What is parameter sharing in deep learning?
-    - Answer
+    - A convolutional neural network learns certain features in images that are useful for classifying the image. 
+    Sharing parameters gives the network the ability to look for a given feature everywhere in the image, rather 
+    than in just a certain area. This is extremely useful
+    - when the object of interest could be anywhere in the image. Relaxing the parameter sharing allows the 
+    network to look for a given feature only in a specific area. For example, if your training data is of faces 
+    that are centered, you could end up with a network that looks for eyes, nose, and mouth in the center of
+    the image, a curve towards the top, and shoulders towards the bottom.
+    - It is uncommon to have training data where useful features will usually always be in the same area, so 
+    this is not seen often.
     
 #### 2. What will be the alpha value for non support vectors.
-    - Answer
+    - 0 for non-support vectors
+    - >=0 for support vectors
     
 #### 3. What will be the effect of increasing alpha values in multinomial NB ?
-    - Answer
+    - It leads to underfitting.
+    
+![NB with Laplace smoothing with Alpha](https://user-images.githubusercontent.com/20341930/167795869-25a27678-958a-436c-9ef4-768a59525dc4.png)
+    
+    - Generally alpha =1 is used. If it is increasing then denominator increases very fast and Prob values are low. Which makes less accurate and simple model. Hence Underfitting.
     
 #### 4. What is recurrent equation of RNN output function ?
-    - Answer
+
+![Eq for RNN output function](https://user-images.githubusercontent.com/20341930/167796496-b5266308-302f-4a7c-b0a0-ce711a6f65af.png)
+
     
 #### 5. What is the minimum and maximum value of tanh ?
     - tanh is hyperbolic tangent function whose value reside between -1 and +1.
