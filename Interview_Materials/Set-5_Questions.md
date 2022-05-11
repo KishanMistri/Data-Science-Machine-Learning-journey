@@ -32,13 +32,18 @@
 
     
 #### 6. How many thresholds we need to check for a real valued features in DT ?
-    - Answer
+    - In DT with real values, we need to treat each value as a threshold
     
 #### 7. How do you compute the feature importance in DT ?
-    - Answer
+    - We take the node which gives high information gain as important.
+    - Feature importance is calculated as the decrease in node impurity weighted by the probability of reaching that node. 
+    The node probability can be calculated by the number of samples that reach the node, divided by the total number of
+    samples. The higher the value the more important the feature.
     
 #### 8. How do you compute the feature importance in SVM ?
-    - Answer
+    - By using the weight coefficients.
+    - In Kernel it is not possible because we use the datapoints of higher dimensions for Classification. Which is not 
+    directly related to current set of features.
     
 #### 9. Prove that L1 will given sparsity in the weight vector ? OR Why does L1 Reg creates sparsity?
     - Derivations are main reason to converging pace.
@@ -72,7 +77,7 @@
     - We can also use both L1 & L2 regularization jointly as a part of optimization problem, 
     Which is called ELASTIC NET formulation.
     - However there will be 2 hyperparameters.
-    - Regularization term = $(\lambda_1 * |W_i|_1) + (\lambda_2 * |W_i|_2)$
+    - Regularization term = lambda_1 * |Wi|_1) + (lambda_2 * |Wi|_2)
     
 #### 12. What are the assumption of NB ?
     - That all the features are conditionally independent. 
@@ -82,35 +87,57 @@
     - KNN uses neighborhood so basic assumption is that the point/data point in the close proximity is the basis of same class classification
     
 #### 14. What are the assumptions of linear regression ?
-    - Answer
+    - Linear regression is an analysis that assesses whether one or more predictor variables explain the dependent 
+    (criterion) variable.  The regression has five key assumptions:
+        Linear relationship
+        Multivariate normality
+        No or little multicollinearity
+        No auto-correlation
+        Homoscedasticity
+    A note about sample size.  In Linear regression the sample size rule of thumb is that the regression analysis 
+    requires at least 20 cases per independent variable in the analysis.
     
 #### 15. Write the optimization equation of linear regression ?
-    - Answer
     
+![Linear Regression Optimization Equation](https://user-images.githubusercontent.com/20341930/167810834-3ed08514-6b30-4102-b563-0cf33baa7962.png)
+
+
 #### 16. What is time complexity of building KD tree ?
-    - Answer
+    - O(n*d*logn)
     
 #### 17. What is the time complexity to check if a number is prime or not ?
-    - Answer
+    - O(sqrt(n))
     
 #### 18. Angle between two vectors (2,3,4) (5,7,8).
-    - Answer
+    - Calculation:
+
+![Q_cosine](https://user-images.githubusercontent.com/20341930/167812412-551756b1-d278-4e39-91b5-f7273ebd6eba.png)
+
     
 #### 19. Angle between the weigh vector of 2x+3y+5=0 and the vector(7,8).
-    - Answer
+    -  Cos 0 = 0.5
     
 #### 20. Distance between (7,9) and the line 7x+4y-120=0.
-    - Answer
+    - Answer: 4.34
+    - ax+by+c=0 => 7x+4y-120=0
+    - (x1, y1)  => (7,9)
+    => Distance = || a*x1 + b*y1 + c || / sqrt (a^2 + b^2)
     
 #### 21. Distance between the lines 4x+5y+15=0, 4x+5y-17=0.
-    - Answer
+    - two lines are parallel so we get 15-(-17)=32 from intecepts
     
-#### 22. 122. Which of this hyperplane will classify these two class points
+#### 22. 122. Which of this hyperplane will classify these two class points correctly?
 ```
-    1. P: (2,3), (-3,4) N: (-5,7), (-5,-9)
-    2. 4x+5y+7=0, -3y+3x+9=0
+    1. Positives: A(2,3), B(-3,4) Negatives: C(-5,7), D(-5,-9)
+    2. Pi_1: 4x+5y+7=0, pi_2: -3y+3x+9=0
 ```
-    - Answer
+    - Pi_1:
+        Correctly classifies: A, B, C
+        Mis Classify: D
+    - Pi_2:
+        Correctly classifies: A, C
+        Mis Classify: B, D
+    
     
 #### 23. 123. Which of the vector pairs perpendicular to each other
 ```
