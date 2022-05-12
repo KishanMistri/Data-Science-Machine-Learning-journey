@@ -144,7 +144,7 @@
     1. (3,4,5) (-3,-4,5)
     2. (7,4,6) (-4,-7,-12)
 ```
-    - Cos0 = 90' for vectors  1) (3,4,5) (-3,-4,5)
+    - Answer: Cos0 = 90' for vectors  1) (3,4,5) (-3,-4,5)
     
 #### 24. How dropout works ?
     - At each iteration dropouts layer makes a neuron active with a probability of dropout rate. This makes the model 
@@ -183,18 +183,21 @@
 
     
 #### 33. How do we calculate the distance of a point to a plane.
-    - ![Formula for Distance of point to Plane](https://user-images.githubusercontent.com/20341930/168099204-42c525f2-79ac-4bec-9110-825098db8859.png)
+    
+![Formula for Distance of point to Plane](https://user-images.githubusercontent.com/20341930/168099204-42c525f2-79ac-4bec-9110-825098db8859.png)
     
 #### 34. When should we choose PCA over t-sne.
-    - [Detailed Stats-Exchange Answer](https://stats.stackexchange.com/questions/238538/are-there-cases-where-pca-is-more-suitable-than-t-sne)
     
-#### 35. 135. How is my model performing if
+[Detailed Stats-Exchange Answer](https://stats.stackexchange.com/questions/238538/are-there-cases-where-pca-is-more-suitable-than-t-sne)
+    
+#### 35. How is my model performing if
 ```
     1. Train error and cross validation errors are high.
     2. Train error is low and cross validation error is high.
     3. Both train error and cross validation error are low.
 ```
-    - 1. underfitting 
+    - Answer
+      1. underfitting 
       2. overfitting 
       3. best fit
     
@@ -208,6 +211,7 @@
     - It is based on axis parallel lines and it is very useful in performing search queries.
     
 #### 39. What is the relationship between specificity and false positive rate.
+    - Solution:
     
 ![FPR VS Specificity](https://user-images.githubusercontent.com/20341930/168100158-17752904-e4ff-48f9-a48c-3d4cee473e5a.png)
     
@@ -215,6 +219,7 @@
     - Answer
     
 #### 41. What is the alternative to using euclidean distance in Knn when working with high dimensional data ?
+    - Solution:
     
 ![image](https://user-images.githubusercontent.com/20341930/168100299-603d43f4-937b-4e81-a828-43a0e5e18a6b.png)
 
@@ -249,7 +254,7 @@
     - This distance measure is simply the maximum of the distance of two points and the k-distance of the second point. 
     - Basically, if point a is within the k neighbors of point b, the reach-dist(a,b) will be the k-distance of b.
     
-    ![Reachability Distance](https://user-images.githubusercontent.com/20341930/168132037-722951e7-c234-466a-b00c-b2fdc6ba23fd.png)
+![Reachability Distance](https://user-images.githubusercontent.com/20341930/168132037-722951e7-c234-466a-b00c-b2fdc6ba23fd.png)
 
     
 #### 45. What is the local reachability density ?
