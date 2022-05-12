@@ -220,22 +220,53 @@
 
     
 #### 42. What are the challenges with time based splitting? How to check whether the train / test split will work or not for given distribution of data ?
-    - Answer
+    - Challenges:
+        - Spliting it in same bin with different number of samples in each bins
+        - Additional overhead of specific orders.
+        - How long the window of time should be such that the distributions of test and train dataset is same.
+    - How to split:
+        - Split data in train and test set given a Date. Split train set in for example 10 consecutive time folds.
+        - Then, in order not lo lose the time information, perform the following steps:
+        - Train on fold 1 –>  Test on fold 2
+        - Train on fold 1+2 –>  Test on fold 3
+        - Train on fold 1+2+3 –>  Test on fold 4
+        - Train on fold 1+2+3+4 –>  Test on fold 5
+        - Train on fold 1+2+3+4+5 –>  Test on fold 6
+        - Train on fold 1+2+3+4+5+6 –>  Test on fold 7
+        - Train on fold 1+2+3+4+5+6+7 –>  Test on fold 8
+        - Train on fold 1+2+3+4+5+6+7+8 –>  Test on fold 9
+        - Train on fold 1+2+3+4+5+6+7+8+9 –>  Test on fold 10
+        - Compute the average of the accuracies of the 9 test folds (number of folds  – 1)
+    - Refer very good write up here: https://www.linkedin.com/pulse/time-based-splitting-determining-train-test-data-come-manraj-chalokia/?trk=public_profile_article_view
     
 #### 43. How does outlies effect the performance of a model and name a few techniques to overcome those effects.
-    - Answer
+    - Random sample consensus (RANSAC) is an iterative method to estimate parameters of a mathematical model from a 
+    set of observed data that contains outliers, when outliers are to be accorded no influence on the values of the estimates.
+    - Anomaly detection Refer: LOF is one of the anomaly detection algorithm
     
 #### 44. What is reachability distance?
-    - Answer
+    - Reachability distance. The k-distance is now used to calculate the reachability distance.
+    - This distance measure is simply the maximum of the distance of two points and the k-distance of the second point. 
+    - Basically, if point a is within the k neighbors of point b, the reach-dist(a,b) will be the k-distance of b.
+    
+    ![Reachability Distance](https://user-images.githubusercontent.com/20341930/168132037-722951e7-c234-466a-b00c-b2fdc6ba23fd.png)
+
     
 #### 45. What is the local reachability density ?
-    - Answer
-    
+    - The local reachability density is a measure of the density of k-nearest points around a point which is calculated
+    by taking the inverse of the sum of all of the reachability distances of all the k-nearest neighboring points.
+ 
+![Local Reachability distance](https://user-images.githubusercontent.com/20341930/168132135-84ce1720-ed89-47ea-8e91-cf21d033dba4.png)
+
+  
 #### 46. What is the need of feature selection ?
-    - Answer
+    - If the data is having very dimensional data the model would not perform well. So, to get the best model we
+    do features selection which gets the useful features of data 
+    And model is trained on selected model to yield better results.
     
 #### 47. What is the need of encoding categorical or ordinal features?
-    - Answer
+    - Machine learning models require all input and output variables to be numeric. This means that if your data
+    contains categorical data, you must encode it to numbers before you can fit and evaluate a model.
     
 #### 48. What is the intuition behind bias-variance trade-off ?
     - Predictive models have a tradeoff between bias (how well the model fits the data) and 
@@ -249,10 +280,10 @@
     - The best model for a given problem usually lies somewhere in the middle.
     
 #### 49. Can we use algorithm for real time classification of emails.
-    - Answer
+    - Yes
     
 #### 50. What does it mean by precision of a model equal to zero is it possible to have precision equal to 0.
-    - Answer
+    - Yes, we can have 0 precision that means model doesn’t give any true positives.
     
 ---
 
