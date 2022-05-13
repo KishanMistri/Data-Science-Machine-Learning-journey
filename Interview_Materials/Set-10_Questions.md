@@ -174,12 +174,19 @@
 #### 17. What is the difference between PCA & SVD? 
     - PCA is Dimensionality Reduction Technique Where it is mathematically defined.
       Covariance Matrix S(n x n) => Square and Symatric Formed from **Eigen Vectors**
-      Its Matrix decomposition will look like => S (dxd) = W (dxd) * Lamda (dxd) * W^T (dxd)
+      Its Matrix decomposition will look like => 
+          S (dxd) = W (dxd) * Lamda (dxd) * W^T (dxd)
+      Cov(X) => S = Eigen_Vec(S) * Eigen_Val(S) * Transpose of Eigen_Vec(S)
+      
     - SVD X(n x d) is matrix factorization technique [Where matrix is not square but Rectangular in shape.]
       SVD X(nxd) = U (nxn) * Sigma (nxd) *V^T (dxd)
       Where Sigma is diagonal matrix with **Eigen values** in Diagonal places.
       
     
+#### 18. 
+    - Answer
+    
+
     
 # Template:
 #### 2. 
