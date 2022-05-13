@@ -55,7 +55,7 @@
     - After obtaining w2v representation of a word we multiply it with a scalar value of tf-idf
     
 #### 11. How to you use weighted distance in content based recommendation ?
-    - Answer
+    - https://www.ra.ethz.ch/cdstore/www2008/www2008.org/papers/xhtml/pp049/www2008-sample/index.html
     
 #### 12. What is the time complexity of SVD decomposition ?
     - O(mn min(n, m))
@@ -110,7 +110,10 @@
     - alpha and C are inversely proportional to each other.
     
 #### 23. How does back propagation work in case of LSTM?
-    - Answer
+    - Source: GeeksForGeeks
+    
+    ![image](https://user-images.githubusercontent.com/20341930/168256952-698d4d8e-ea31-4109-adf4-5c0f5658710d.png)
+
     
 #### 24. What is the difference between supervised and unsupervised models?
     - In supervised learning we have the class labels for the datapoints
@@ -188,8 +191,8 @@
     - We remove the points which have high loss value from The original data 
     - And repeat the same process until the convergence.
     
-#### 33. What are jaccard & Cosine Similarities
-    - Answer
+#### 33. What are jaccard & Cosine Similarities?
+    - Similarity Matrix
     
 #### 34. What are assumptions of Pearson correlation ?
     - Linearity and absence of outliers.
@@ -210,46 +213,115 @@
     - Average Case: It is the same as the best/worst case depending on data and implementation of the algorithm
     
 #### 37. Explain the procedure of “prediction in hierarchical clustering”
-    - 
+    - Initially, each data point is considered as an individual cluster in this technique. After each iteration, 
+    the similar clusters merge with other clusters and the merging will stop until one cluster or K clusters are formed.
+
+    - The steps of the agglomerative algorithm are as follows:
+        1- Compute the proximity matrix.
+        2- Let each data point be a cluster.
+        3- Repeat this step: Combine the two closest clusters and accordingly update the proximity matrix.
+        4- Until only a single cluster remains.
     
 #### 38. Relation between knn and kernel SVM
-    - Answer
+    - In KNN we use similarities of points based on distances similarly we use similarities Computed by kernel
+    in kernel SVM.
+    - In RBF kernel σ is equivalent to K in KNN, i.e., as σ increases we consider points with distances of increased 
+    range similarly in KNN if K is increases, we take more points having more distance ranges.
     
 #### 39. Proof of “convergence of kmeans”
-    - Answer
+    - https://stats.stackexchange.com/questions/188087/proof-of-convergence-of-k-means
     
 #### 40. What is the optimal value of minpoints for the data (1000, 50)
-    - Answer
+    - MinPoint is Hyper Parameter for Clustering algorithm DBSCAN.
+    - # pts in eps radius around point
+    - Rule of thumb: Choosing Minpts ≥ Dim + 1
+        - Typically: MinPts == 2* Dim
+    - Logically If the Data is Noisy then Keep MinPts high.
+    - So the Answer if 2 * 50 = 100
     
-#### 41. Why do you want to/ why did you choose data science as your career
-    - Answer
+#### 41. What is difference between AI, ML and DL?
+
+![image](https://user-images.githubusercontent.com/20341930/168251948-6a4f0467-fea5-4acf-88a1-d6e873699abb.png)
+
     
-#### 42. What is difference between AI, ML and DL?
-    - Answer
+#### 42. What is a Python Package, and Have you created your own Python Package?
+    - Collection Classes.
+    - For example: [Not the best but for the idea]
+        Package - Animal:
+                    Class - Dog, Cat, Camel
+                          Methods - Bark(), Run(), lick() (For Dog)
+                                  - Sleep(), get_irritated_when_pet() (For cat)
+                                  - Store_Water(), Safari() (For Camel)
+            
     
-#### 43. What is a Python Package, and Have you created your own Python Package?
-    - Answer
+#### 43. Can you write a program for inverted star program in python?
     
-#### 44. Can you write a program for inverted star program in python?
-    - Answer
+    ```
+    rows = int(input("Enter the number of rows: "))  
+ 
+    for a in range(rows + 1, 0, -1):    
+        for b in range(0, a - 1):  
+            print("*", end=' ')  
+        print(" ")
     
-#### 45. Write a program to create a data frame and remove elements from it.
-    - Answer
+    Enter the number of rows: 5
+    * * * * *
+    * * * *
+    * * *
+    * *
+    *
     
-#### 46. Write code to find the 8th highest value in the Data Frame.
-    - Answer
+    ```
     
-#### 47. What’s difference between an array and a list?
-    - Answer
+#### 44. Write a program to create a data frame and remove elements from it.
+    ```
+    import pandas as pd
+    d = {'col1': [1, 2], 'col2': [3, 4]}
+    df = pd.DataFrame(data=d)
+    print("Before Delete\n",df)
+    # Deleted first row
+    df.drop([0],inplace=True)
+    print("\n\nAfter Delete\n",df)
+    ```
+    - Output:
+    ```
+    Before Delete
+        col1  col2
+    0     1     3
+    1     2     4
+
+
+    After Delete
+        col1  col2
+    1     2     4
+    ```
     
-#### 48. Differentiate between Supervised, Unsupervised and Reinforcement learning with their algorithm example.
-    - Answer
+#### 45. Write code to find the 8th highest value in the Data Frame.
+    ```
+    8thlarge = DF.nlargest(8, "COLNAME")
+    ```
     
-#### 49. How would you deal with feature of 4 categories and 20% null values?
-    - Answer
+#### 46. What’s difference between an array and a list?
     
-#### 50. What is central tendency?
-    - Answer
+![Screenshot from 2022-05-13 14-55-16](https://user-images.githubusercontent.com/20341930/168254230-ba53260c-8a91-46ab-9423-683c1349a49e.png)
+
+    
+#### 47. Differentiate between Supervised, Unsupervised and Reinforcement learning with their algorithm example.
+    - Supervised: When there is X => Y Mapping
+    - Unsupervised: When there is only X and grouping them based on similarity
+    - Reinforcement: When There is action and we want to make algorithm to do specific task but put reward on executing it
+                     and giving punishment when not doing it (right)
+    
+#### 48. How would you deal with feature of 4 categories and 20% null values?
+    - [In General, you need to find why they are missing in the first place and based on that you have to choose the approach.]
+    - Encoding Categorical features
+    - There are 2 primary ways of handling missing values:
+        Deleting the Missing values
+        Imputing the Missing Values (Mode)
+    
+#### 49. What is central tendency?
+    - Central tendency is a statistic that represents the single value of the entire population or a dataset. 
+    - Some of the important examples of central tendency include mode, median, arithmetic mean and geometric mean, etc.
     
 ---
 
