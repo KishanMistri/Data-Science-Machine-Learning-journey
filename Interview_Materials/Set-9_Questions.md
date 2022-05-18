@@ -1,11 +1,26 @@
 #### 1. How to deal with imbalance data in classification modelling?
-    - Answer
+    - Downsampling [Random sampling]
+    - Upsampling [SMOTE]
     
 #### 2. What is Gradient Descent? What is Learning Rate and why we need to reduce or increase? Tell us why Global minimum is reached and why it doesn’t improve when increasing the LR after that point?
-    - Answer
+    - Gradient descent is an optimization algorithm which is commonly-used to train machine learning models and neural networks.
+    - Learning rate is a hyper-parameter that controls how much we are adjusting the weights of our network with 
+    respect the loss gradient. The lower the value, the slower we travel along the downward slope. While this might
+    be a good idea (using a low learning rate) in terms of making sure that we do not miss any local minima, it 
+    could also mean that we’ll be taking a long time to converge — especially if we get stuck on a plateau region.
+    
+    ```
+    new_weight = existing_weight — learning_rate * gradient
+    ```
+    - If learning rate is high it will have deflective effect on finding minima/maxima.
+    
+    ![Learning Rate effect in GBD](https://user-images.githubusercontent.com/20341930/169075488-6329350d-7a87-4cc0-97e1-9d716f50d1c1.png)
+
+    
     
 #### 3. What is Log-Loss and ROC-AUC?
-    - Answer
+    - Checkout what, why we need LOG-LOSS where ROC-AUC fails/limits.
+    - [Answer](https://www.datamachines.io/blog/auc-vs-log-loss)
     
 #### 4. Two Logistic Regression Models – Which one will you choose – One is trained on 70% and other on 80% data. Accuracy is almost same?
     - Answer
