@@ -23,40 +23,117 @@
     - [Answer](https://www.datamachines.io/blog/auc-vs-log-loss)
     
 #### 4. Two Logistic Regression Models – Which one will you choose – One is trained on 70% and other on 80% data. Accuracy is almost same?
-    - Answer
+    - 80% as more data the better.
     
 #### 5. Explain bias – variance trade off. How does this affect the model?
-    - Answer
+    - What? => The bias–variance tradeoff is a central problem in supervised learning. Ideally, one wants to 
+    choose a model that both accurately captures the regularities in its training data, but also generalizes 
+    well to unseen data. 
+    - Unfortunately, it is typically impossible to do both simultaneously. 
+    - High-variance learning methods may be able to represent their training set well but are at risk of 
+    overfitting to noisy or unrepresentative training data. 
+    - In contrast, algorithms with high bias typically produce simpler models that may fail to capture important
+    regularities (i.e. underfit) in the data.
+    
+    - Why? => If our model is too simple and has very few parameters then it may have high bias and low variance. 
+    On the other hand if our model has large number of parameters then it’s going to have high variance and
+    low bias. So we need to find the right/good balance without overfitting and underfitting the data.
+    - This tradeoff in complexity is why there is a tradeoff between bias and variance. An algorithm can’t be more
+    complex and less complex at the same time.
+  
+![Total error](https://user-images.githubusercontent.com/20341930/169347109-bb50cbfe-d579-4779-bd63-f9d33321ec51.png)
+
+![Bias-Variance Tradeoff](https://user-images.githubusercontent.com/20341930/169346997-b93b39ee-2658-43ab-bef6-33840664beae.png)
+
+
+    -An optimal balance of bias and variance would never overfit or underfit the model.
     
 #### 6. What is multi collinearity? How to identify and remove it?
-    - Answer
+    - Multicollinearity occurs when independent variables in a regression model are correlated. This correlation 
+    is a problem because independent variables should be independent. If the degree of correlation between variables
+    is high enough, it can cause problems when you fit the model and interpret the results.
+    
+    - How to identify => VIF (Variance Inflation Factor) Value Range [1 -> Infinity)
+        - 1-5 => Tolarable
+        - >10 -> Needs work
+        
+    - To remove/decrease the affect =>
+        - Structural Multicolinearity: Center you continuous variables
+        - Data Multicolinearity: 
+            - Remove highly correlated variables
+            - Linearly combine correlated independent variables OR add them together
+            - Use regularization
+            
+Refer: [Multicolinearity with regression](https://statisticsbyjim.com/regression/multicollinearity-in-regression-analysis/)
     
 #### 7. Differentiate between Sensitivity and Specificity.
-    - Answer
+    - Sensitivity = [(TP/TP+FN)] x 100
+    - Specificity = [(TN/TN+FP)] x 100
+    - Example
+   
+![Sensitivity and Specificity](https://user-images.githubusercontent.com/20341930/169353378-23e2852f-f8c6-4841-964f-546665534cb6.png)
+
     
 #### 8. What is difference between K-NN and K-Means clustering?
-    - Answer
+    - KNN => Supervised ML algo
+    - KMeans => Unsupervised ML algo
     
 #### 9. How to handle missing data? What imputation techniques can be used?
-    - Answer
+    - Drop
+    - Imputation:
+        - By Mean, Median, Mode, Any Aggregation
+        - By using regression algorithms
     
 #### 10. Explain how you would find and tackle an outlier in the dataset. Follow up: What about inlier?
-    - Answer
+    - Box plot [univariate analysis]
+    - Percentiles and IQR
+    - An inlier is a data observation that lies in the interior of a data set and is unusual or in error. 
+    - Because inliers are difficult to distinguish from the other data values, they are sometimes difficult 
+    to find and – if they are in error – to correct.
     
 #### 11. How to determine if a coin is biased? Hint: Hypothesis testing
-    - Answer
+    - Null hypothesis,          Ho:P=0.5 (P=Q=0.5) [Not biased.]
+    - Alternative Hypothysis:   H1:P>0.5
+      where P is the prob of occuring head.
+    - As there are success & failure, this is Binomial Distribution with n=900 and p=0.5 under the null hypothesis 
+    (i.e. if the coin were unbiased then p=probability of heads(or tails) = 0.5) and Taking general Threshold p-value = 5%
+    
+    - We know z = (p-P)/sqrt(PQ/N)
+    - Where p =490/900 =0.54
+
+    - Now z=(0.54-0.5)/sqrt((0.5*0.5)/900)
+
+    - z = 2.4
+    - There is 2.4% chance that it will yield result that supports the Null Hypothysis. 
+    - As 2.4% < Threshold selected 5%. Ho is rejected. 
+    - Hence the coin is biased.....
     
 #### 12. Is interpretability important for machine learning model? If so, ways to achieve interpretability for a machine learning models?
-    - Answer
+    - Yes, as it will explain why model classify/predicted pred value.
+    - Otherwise ML model will black box and you can't decide and work on improving Model if not know
+    how it came to given conclusion.
+    - However, if interpretability is important within our algorithm — as it often is for high-risk environments
+    then we must accept a tradeoff between accuracy and interpretability.
+   
+Refer: [Extensive Detailed Article with Math](https://towardsdatascience.com/guide-to-interpretable-machine-learning-d40e8a64b6cf)
     
 #### 13. How would you design a data science pipeline?
-    - Answer
+    
+![data Pipelien](https://user-images.githubusercontent.com/20341930/169357802-6cde0d11-5c0a-49ab-a3ad-41c499203db1.png)
+
     
 #### 14. What does a statistical test do?
-    - Answer
+    - A statistical test provides a mechanism for making quantitative decisions about a process or processes. 
+    The intent is to determine whether there is enough evidence to "reject" a conjecture or hypothesis about 
+    the process. The conjecture is called the null hypothesis.
     
 #### 15. Explain topic modelling in NLP and various methods in performing topic modelling.
-    - Answer
+    - Topic modelling refers to the task of identifying topics that best describes a set of documents. 
+    These topics will only emerge during the topic modelling process (therefore called latent). And one 
+    popular topic modelling technique is known as Latent Dirichlet Allocation (LDA).
+    - Other methods and details: 
+
+[Topic Modelling Methods](https://www.analyticssteps.com/blogs/what-topic-modelling-nlp)
     
 #### 16. Describe back propagation in few words and its variants?
     - Answer
@@ -65,46 +142,100 @@
     - Answer
     
 #### 18. If we put a 3×3 filter over 6×6 image what will be the size of the output image?
-    - Answer
+    - Input: n X n and Filter Size is f X f, then the output size will be (n-f+1) X (n-f+1)
+    => 4x4
     
 #### 19. What will you do to reduce overfitting in deep learning models?
-    - Answer
+    - We can solve the problem of overfitting by:
+    1. Increasing the training data by data augmentation
+    2. Feature selection by choosing the best features and remove the useless/unnecessary features
+    3. Early stopping the training of deep learning models where the number of epochs is set high
+    4. Dropout techniques by randomly selecting nodes and removing them from training
+    5. Reducing the complexity of the model
     
 #### 20. How would you check if the model is suffering from multi-Collinearity?
-    - Answer
+    - VIF (Variance Inflation Factor) Value Range [1 -> Infinity)
+        - 1-5 => Tolarable
+        - >10 -> Needs work
     
 #### 21. Why is CNN architecture suitable for image classification and not an RNN?
-    - Answer
+    - While RNNs are suitable for handling temporal or sequential data, CNNs are suitable for handling 
+    spatial data (images). Though both models work a bit similarly by introducing sparsity and reusing 
+    the same neurons and weights over time (in case of RNN) or over different parts of the image 
+    (in case of CNN).
     
 #### 22. What are the approaches for solving class imbalance problem?
-    - Answer
+    - Upsampling
+    - Downsampling
     
 #### 23. Tell us about transfer learning? What are the steps you would take to perform transfer learning?
-    - Answer
+    - Transfer learning is a machine learning method where we reuse a pre-trained model as the 
+    starting point for a model on a new task.
+    - To put it simply—a model trained on one task is repurposed on a second, related task as an optimization
+    that allows rapid progress when modeling the second task.
+    - By applying transfer learning to a new task, one can achieve significantly higher performance than 
+    training with only a small amount of data.
+    
+    - How? => For Classical & Deep Learning both: https://www.v7labs.com/blog/transfer-learning-guide
+    
     
 #### 24. Explain concepts of epoch, batch, and iteration in deep learning.
-    - Answer
+    - The batch size is a hyperparameter of gradient descent that controls the number of training samples 
+    to work through before the model’s internal parameters are updated.
+    - The number of epochs is a hyperparameter of gradient descent that controls the number of complete passes 
+    through the training dataset.
+    - An iteration in deep learning, is when all of the batches are passed through the model.
+    
     
 #### 25. When sampling, what types of biases can be inflected? How to control the biases?
-    - Answer
+    - [Answer](https://www.scribbr.com/methodology/sampling-bias/)
     
 #### 26. What are some of the types of activation functions and specifically when to use them?
-    - Answer
+    - Popular types of activation functions and when to use them
+    1. Binary Step
+    2. Linear
+    3. Sigmoid
+    4. Tanh
+    5. ReLU
+    6. Leaky ReLU
+    7. Parameterised ReLU
+    8. Exponential Linear Unit
+    9. Swish
+    10. Softmax
+    
+    -Which one to use?
+    1. Sigmoid functions and their combinations generally work better in the case of classifiers
+    2. Sigmoids and tanh functions are sometimes avoided due to the vanishing gradient problem
+    3. ReLU function is a general activation function and is used in most cases these days
+    4. If we encounter a case of dead neurons in our networks the leaky ReLU function is the best choice
+            Always keep in mind that ReLU function should only be used in the hidden layers
+    5. As a rule of thumb, you can begin with using ReLU function and then move over to other activation 
+    functions in case ReLU doesn’t provide with optimum results
     
 #### 27. Tell us the conditions that should be satisfied for a time series to be stationary?
-    - Answer
+    - Stationary implies that samples of identical size have identical distribution. This form is very restrictive, 
+    and we rarely observe it, so for doing TSA, the term “stationarity” is used to describe covariance stationarity.
+    
+    - To some time series to be classified as stationary (covariance stationarity), it must satisfy 3 conditions:
+    1. Constant mean
+    2. Constant variance
+    3. Constant covariance between periods of identical distance
+    
     
 #### 28. What is the difference between Batch and Stochastic Gradient Descent?
-    - Answer
+![image](https://user-images.githubusercontent.com/20341930/169361405-9c6c1ca0-1bd8-4f93-a16c-40b8dfee4791.png)
     
 #### 29. What happens when neural nets are too small? Tell us, What happens when they are large enough?
-    - Answer
+    - When we initialize weights too small(<1)? Their gradient tends to get smaller as we move backward through 
+    the hidden layers, which means that neurons in the earlier layers learn much more slowly than neurons in 
+    later layers. This causes minor weight updates.
+    - Large NN? 
     
 #### 30. Why do we need pooling layer in CNN? Common pooling methods?
     - Answer
     
-#### 31. Are ensemble models better than individual models? Why/why – not?
-    - Answer
+#### 31. Are ensemble models better than individual models? 
+    - Yes 
     
 #### 32. How is random forest different from Gradient boosting algorithm, given both are tree-based algorithm?
     - Answer
