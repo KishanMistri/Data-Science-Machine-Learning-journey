@@ -224,9 +224,4 @@
 ###### References/Sources:
 1. https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/
 
----
-
-#### Question_Template
-#### X. Question
-   - Answer
 
