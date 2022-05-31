@@ -174,16 +174,28 @@
     
 ![Modified version of hinge loss which is differentiable everywhere](https://user-images.githubusercontent.com/20341930/166430885-814f12e5-5eca-446d-9c01-293f18b9b810.png)
 
+#### 19. What is RMSPROP?
+    - RMSProp is Optimizer technique.
+    - In general/SGD/MiniBatch SGD, we use single learning rate to converge to point. But it might converge to Local 
+    Minima [Which is okay] or saddle point[Which is bad]. And at very constant slow pace
+    - We are updating learning rate with each iteration to coverge faster using second order moment (variance).
+    
+![RMSProp](https://user-images.githubusercontent.com/20341930/171124605-021c6b26-2590-4975-bafb-baba6167cb60.png)
  
-#### 19. Difference between ADAM vs RMSPROP ?
-    - Answer
+#### 20. What is ADAM ?
+    - ADAM uses first order moment (mean) & second order moment (variance) both to update the learning rate in 
+    runtime to converge faster.
  
-#### 20. What is RMSPROP?
-    - Answer
+![Adam](https://user-images.githubusercontent.com/20341930/171123450-7014bfa8-2833-4138-b657-fef8c3daf958.png)
  
-#### 21. What is ADAM ?
-    - Answer
+#### 21. Difference between ADAM vs RMSPROP ?
+    - Adam uses both First & Second Order Moment to update Learning rate.
+    - While RMSProp uses Only second order moment.
+    - Both of these are managed by Hyperparameter beta_1 (for mean) * beta_2 (for variance).
+    - If beta_1 is 0 then ADAM == RMSProp.
+    - For mathematical details please see above questions 19 & 20.
  
+
 #### 22. What is the maximum and minimum values of gradient of the sigmoid function ?
     - Value of Sigmoid Function is between 0 to 1. So grediant => Slope of graph is shown as below.
 
@@ -191,7 +203,15 @@
 
  
 #### 23. What is RELU? Is it differentiable ?
-    - Answer
+    - Relu is an activation function which can be used in NN.
+    - Relu F(z) = Max(0, z) 
+
+![Relu](https://user-images.githubusercontent.com/20341930/171125843-6408bcbf-92b6-41ff-925d-2aa2c1ae5928.png)
+
+    - As you can see function in blue.
+    - To be used in NN it needs to be Differenciable as the weight calculation works on derivative of activation function
+    - But Relu is not differenciable at z=0.
+    - So we are using Softplus function with similar effect to relu with Differenciable everywhere.
  
 #### 24. What is precission and recall ?
     - Precision tells us that out the total positive points how many of them are predicted to be positive.
@@ -207,7 +227,14 @@
 ![image](https://user-images.githubusercontent.com/20341930/165241845-2c30e40f-be9e-4bd3-bd8e-7874ed482a21.png)
 
 #### 26. Name a few weight initialization techniques ?
-    - Answer
+    - Random initialization
+    - Taking values from specific distributions
+    - Based on that perticular perceptron/neuron's input & output count [FanIn & FanOut]
+    - Xavier 
+    - HE initialization
+    
+![With Formulae](https://user-images.githubusercontent.com/20341930/171125055-d2c6cddf-fe03-4d88-9404-e6c8a07437e3.png)
+
  
 ---
 
