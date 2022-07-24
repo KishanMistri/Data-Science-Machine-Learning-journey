@@ -12,3 +12,4 @@ Hope this helps you in the same way it helped me..!
 If you came and did all things listed here, I am a fan of you. But there is always a room of improvement. I am keeping extra reading section to put advance things as well. Feel free to suggest me few new things and make this repo mind blowing..!
 
 ***Note: This is also maintained in Notion Pages linked at the end of each section/page. The Notion pages has latest details as in each sections as new concepts added there first and then dumped here with proper formatting.***
+![image](https://user-images.githubusercontent.com/20341930/180656341-00f1fa93-a7cf-410d-9690-363743ff1c4e.png)
