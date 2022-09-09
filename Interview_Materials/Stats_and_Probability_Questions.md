@@ -10,9 +10,6 @@
 
 ![Q7](https://user-images.githubusercontent.com/20341930/166899121-dabcbb52-f550-4e23-b4dd-22cc543098d0.png)
 
-
-
-
 Templates:
 ##### 1:
       - Answer
